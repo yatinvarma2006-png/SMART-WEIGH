@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Smart Nutrition Scale</string>
+    <string name="nav_browse">Food Database</string>
+    <string name="nav_shortlist">Shortlist</string>
+    <string name="nav_sync">Wi-Fi Sync</string>
+
+    <string name="search_hint">Search 542 IFCT raw foods...</string>
+    <string name="shortlist_limit_reached">Maximum 20 items allowed in shortlist.</string>
+    <string name="sync_button_text">Sync Shortlist via Wi-Fi</string>
+</resources>

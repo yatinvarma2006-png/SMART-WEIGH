@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_foods"
+        android:icon="@drawable/ic_database"
+        android:title="@string/nav_browse" />
+    <item
+        android:id="@+id/nav_shortlist"
+        android:icon="@drawable/ic_star_filled"
+        android:title="@string/nav_shortlist" />
+    <item
+        android:id="@+id/nav_sync"
+        android:icon="@drawable/ic_wifi"
+        android:title="Wi-Fi Sync" />
+</menu>

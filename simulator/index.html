@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Nutrition Scale — Hardware & Android Companion Simulator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Top Global Header -->
+  <header class="app-header">
+    <div class="header-content">
+      <div class="logo-area">
+        <span class="chip-badge">FINAL YEAR PROJECT</span>
+        <h1>Smart Nutrition Scale <span class="dim">Digital Twin</span></h1>
+      </div>
+      <div class="system-status">
+        <div class="status-indicator">
+          <span class="pulse-dot"></span>
+          <span>ESP32 Running (160MHz)</span>
+        </div>
+        <div class="status-indicator">
+          <span class="wifi-dot connected" id="global-wifi-dot"></span>
+          <span id="global-wifi-label">Wi-Fi (192.168.1.150)</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Split Workbench -->
+  <main class="workbench">
+    
+    <!-- LEFT PANEL: PHYSICAL HARDWARE SCALE -->
+    <section class="hardware-panel">
+      <div class="panel-header">
+        <h2>Hardware System (ESP32 + HX711 + ILI9341 + Encoder)</h2>
+        <span class="badge">Standalone Mode Active</span>
+      </div>
+
+      <!-- Kitchen Scale Device Representation -->
+      <div class="scale-device">
+        <!-- Physical Weighing Platform Surface -->
+        <div class="weighing-platform" id="scale-platter">
+          <div class="platform-center">
+            <span class="brand-text">PRECISION 1kg STRAIN-GAUGE LOAD CELL (0.1g RESOLUTION)</span>
+            <div class="current-item-on-scale" id="on-scale-label">Scale Platform Empty</div>
+          </div>
+        </div>
+
+        <!-- Scale Control Console -->
+        <div class="scale-console">
+          <!-- 2.4" ILI9341 TFT Display (240x320 Portrait Ratio) -->
+          <div class="tft-bezel">
+            <div class="tft-screen" id="tft-screen">
+              <!-- Header Bar -->
+              <div class="tft-header">
+                <span class="tft-title" id="tft-header-title">SMART NUTRITION SCALE</span>
+                <span class="tft-wifi-badge active" id="tft-wifi-badge">WIFI</span>
+              </div>
+
+              <!-- Dynamic Screen Views -->
+              <!-- VIEW 1: IDLE / SELECTION -->
+              <div class="tft-view" id="view-idle">
+                <div class="tft-card">
+                  <div class="card-caption">CURRENT WEIGHT</div>
+                  <div class="live-weight-display" id="idle-live-weight">0.0 g</div>
+                </div>
+
+                <div class="tft-card border-amber">
+                  <div class="card-caption text-amber" id="food-slot-label">FOOD ITEM (1/5)</div>
+                  <div class="food-name" id="idle-food-name">Mustard Oil</div>
+                  <div class="macro-line" id="idle-macro-line1">Per 100g: 884 kcal | P:0.0g</div>
+                  <div class="macro-line" id="idle-macro-line2">F:100.0g | C:0.0g</div>
+                </div>
+
+                <div class="tft-card session-card">
+                  <div class="session-title" id="idle-session-title">Session (0 items): 0 kcal</div>
+                  <div class="session-sub" id="idle-session-sub">P:0.0g  F:0.0g  C:0.0g</div>
+                </div>
+
+                <div class="tft-footer">Rotate: Browse | Click: Select</div>
+              </div>
+
+              <!-- VIEW 2: TARE PROMPT -->
+              <div class="tft-view hidden" id="view-tare">
+                <div class="tft-card small">
+                  <div class="card-caption">SELECTED FOOD:</div>
+                  <div class="food-name-small text-amber" id="tare-food-name">Mustard Oil</div>
+                </div>
+
+                <div class="tft-card border-yellow text-center">
+                  <div class="step-title text-yellow">PLACE EMPTY BOWL</div>
+                  <div class="card-caption">Live Container Weight:</div>
+                  <div class="live-weight-display text-white" id="tare-live-weight">0.0 g</div>
+                  <div class="prompt-text text-yellow">-> Press knob to TARE &lt;-</div>
+                </div>
+
+                <div class="tft-footer">Click button = Zero (Tare) scale</div>
+              </div>
+
+              <!-- VIEW 3: WEIGHING & SETTLING -->
+              <div class="tft-view hidden" id="view-weighing">
+                <div class="tft-card small">
+                  <div class="card-caption">WEIGHING ITEM:</div>
+                  <div class="food-name-small text-cyan" id="weighing-food-name">Mustard Oil</div>
+                </div>
+
+                <div class="tft-card border-yellow text-center" id="weighing-card">
+                  <div class="card-caption">NET FOOD WEIGHT</div>
+                  <div class="live-weight-display text-yellow" id="weighing-live-weight">0.0 g</div>
+                  <div class="settling-badge" id="settling-badge">WAITING TO SETTLE...</div>
+                </div>
+
+                <div class="tft-footer">Keep hands off scale while settling</div>
+              </div>
+
+              <!-- VIEW 4: RESULT -->
+              <div class="tft-view hidden" id="view-result">
+                <div class="tft-card small border-cyan">
+                  <div class="food-name" id="result-food-name">Mustard Oil</div>
+                  <div class="result-weight" id="result-weight-label">Weighed: 25.0 g</div>
+                </div>
+
+                <div class="macro-grid">
+                  <div class="macro-tile cal">
+                    <span class="tile-label">CALORIES</span>
+                    <span class="tile-val" id="res-cal">221</span>
+                    <span class="tile-unit">kcal</span>
+                  </div>
+                  <div class="macro-tile prot">
+                    <span class="tile-label">PROTEIN</span>
+                    <span class="tile-val" id="res-prot">0.0</span>
+                    <span class="tile-unit">g</span>
+                  </div>
+                  <div class="macro-tile fat">
+                    <span class="tile-label">FAT</span>
+                    <span class="tile-val" id="res-fat">25.0</span>
+                    <span class="tile-unit">g</span>
+                  </div>
+                  <div class="macro-tile carb">
+                    <span class="tile-label">CARBS</span>
+                    <span class="tile-val" id="res-carb">0.0</span>
+                    <span class="tile-unit">g</span>
+                  </div>
+                </div>
+
+                <div class="action-card-btn">CLICK TO ADD TO SESSION</div>
+                <div class="tft-footer">Click = Commit to running session total</div>
+              </div>
+
+              <!-- Toast Alert Overlay -->
+              <div class="tft-toast hidden" id="tft-toast">
+                <div class="toast-title" id="toast-title">TARED!</div>
+                <div class="toast-msg" id="toast-msg">Scale zeroed to 0.0g</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rotary Encoder Module -->
+          <div class="encoder-module">
+            <div class="encoder-title">SEALED ROTARY ENCODER</div>
+            <div class="encoder-knob-container">
+              <button class="knob-arrow-btn" id="btn-ccw" title="Rotate Counter-Clockwise (Previous)">↺</button>
+              
+              <div class="rotary-knob" id="rotary-knob" title="Click knob (Short: Select/Tare | Long >1.5s: Reset Session)">
+                <div class="knob-detents"></div>
+                <div class="knob-center-switch">
+                  <span>PUSH</span>
+                </div>
+              </div>
+
+              <button class="knob-arrow-btn" id="btn-cw" title="Rotate Clockwise (Next)">↻</button>
+            </div>
+            
+            <div class="knob-instructions">
+              <div><strong>Turn:</strong> Scroll Shortlist</div>
+              <div><strong>Click:</strong> Select / Tare / Add</div>
+              <div><strong>Hold (>1.5s):</strong> Reset Session Total</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Load Cell & Weight Controls -->
+      <div class="physical-controls-card">
+        <h3>Physical Scale Environment Simulator</h3>
+        <p class="card-desc">Simulate placing a container and raw ingredients on the kitchen scale platform:</p>
+        
+        <div class="preset-buttons">
+          <button class="btn-preset" id="btn-place-bowl">Place Prep Bowl (+65.0g)</button>
+          <button class="btn-preset" id="btn-add-oil">Pour Mustard Oil (+15g)</button>
+          <button class="btn-preset" id="btn-add-paneer">Add Paneer (+80g)</button>
+          <button class="btn-preset" id="btn-add-rice">Add Raw Rice (+150g)</button>
+          <button class="btn-preset btn-warning" id="btn-overload">Overload Test (1050g)</button>
+          <button class="btn-preset btn-danger" id="btn-remove-all">Remove All (0g)</button>
+        </div>
+
+        <div class="weight-slider-row">
+          <label for="weight-slider">Continuous Weight Slider (Max 1kg): <span id="slider-weight-val">0.0</span> g</label>
+          <input type="range" id="weight-slider" min="0" max="1000" step="0.1" value="0">
+        </div>
+      </div>
+
+      <!-- Serial Console & Calibration Wizard -->
+      <div class="serial-console-card">
+        <div class="console-top">
+          <span>ESP32 UART (115200 BAUD) — SERIAL MONITOR</span>
+          <button class="btn-small" id="btn-clear-serial">Clear Log</button>
+        </div>
+        <div class="serial-log" id="serial-output"></div>
+        <div class="serial-input-row">
+          <input type="text" id="serial-input" placeholder="Type 'CAL' to start calibration wizard or enter reference grams...">
+          <button id="btn-send-serial">Send</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- RIGHT PANEL: ANDROID COMPANION APP -->
+    <section class="phone-panel">
+      <div class="panel-header">
+        <h2>Android Companion App (Native Java + Room SQLite)</h2>
+        <span class="badge badge-android">IFCT 2017 Seeded (542 Foods)</span>
+      </div>
+
+      <!-- Mobile Device Frame -->
+      <div class="phone-device">
+        <div class="phone-speaker"></div>
+        <div class="phone-screen">
+          
+          <!-- Android Status Bar -->
+          <div class="android-status-bar">
+            <span>10:45 AM</span>
+            <div class="status-icons">
+              <span>5G</span>
+              <span id="phone-wifi-icon">📶</span>
+              <span>100%</span>
+            </div>
+          </div>
+
+          <!-- App Bar -->
+          <div class="android-app-bar">
+            <span class="app-bar-title" id="app-bar-title">Food Database</span>
+            <span class="shortlist-counter-pill" id="phone-counter-pill">5 / 20</span>
+          </div>
+
+          <!-- Screen 1: Food Database Screen -->
+          <div class="phone-tab-content" id="tab-database">
+            <div class="phone-search-box">
+              <input type="text" id="phone-search-input" placeholder="Search 542 IFCT raw foods...">
+            </div>
+            
+            <div class="database-stats-bar">
+              <span id="db-count-label">542 Raw Foods • Tap ★ to shortlist</span>
+            </div>
+
+            <button class="btn-add-custom-food" id="btn-open-custom-modal">➕ Add Custom Food (e.g. Paneer)</button>
+
+            <div class="food-cards-list" id="phone-food-list">
+              <!-- Populated dynamically from foods.json -->
+            </div>
+          </div>
+
+          <!-- Custom Brand / Food Entry Modal -->
+          <div class="custom-food-modal hidden" id="custom-food-modal">
+            <div class="modal-card">
+              <div class="modal-header">
+                <h3>Add Custom / Brand Food</h3>
+                <button class="modal-close" id="btn-close-modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <div style="font-size: 11px; color: #64748B; margin-bottom: 8px;">
+                  Quick Brand Templates (tap to pre-fill from packet):
+                </div>
+                <div class="brand-chips-row">
+                  <button type="button" class="brand-chip" data-brand="Pintola" data-name="Peanut Butter (Crunchy)" data-group="Nuts &amp; Spreads" data-cal="625" data-prot="30.0" data-fat="50.0" data-carb="20.0">🥜 Pintola PB</button>
+                  <button type="button" class="brand-chip" data-brand="Amul" data-name="Pasteurised Butter" data-group="Dairy &amp; Fats" data-cal="717" data-prot="0.5" data-fat="80.0" data-carb="0.5">🧈 Amul Butter</button>
+                  <button type="button" class="brand-chip" data-brand="MuscleBlaze" data-name="Biozyme Whey Isolate" data-group="Supplements" data-cal="395" data-prot="75.0" data-fat="4.5" data-carb="10.0">💪 MB Whey</button>
+                  <button type="button" class="brand-chip" data-brand="Amul" data-name="Malai Paneer" data-group="Milk &amp; Dairy" data-cal="310" data-prot="18.0" data-fat="25.0" data-carb="4.0">🧀 Amul Paneer</button>
+                  <button type="button" class="brand-chip" data-brand="Generic" data-name="Low-Fat Paneer" data-group="Milk &amp; Dairy" data-cal="160" data-prot="28.0" data-fat="3.0" data-carb="4.0">🥗 Low-Fat Paneer</button>
+                  <button type="button" class="brand-chip" data-brand="Kellogg's" data-name="Rolled Oats" data-group="Breakfast Cereals" data-cal="389" data-prot="13.5" data-fat="6.5" data-carb="67.0">🌾 Kellogg's Oats</button>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 8px; margin-top: 8px;">
+                  <div>
+                    <label>Brand / Maker</label>
+                    <input type="text" id="custom-brand-input" placeholder="e.g. Amul, Pintola" value="Amul">
+                  </div>
+                  <div>
+                    <label>Product Name</label>
+                    <input type="text" id="custom-name-input" placeholder="e.g. Malai Paneer" value="Malai Paneer">
+                  </div>
+                </div>
+                
+                <label>Category / Food Group</label>
+                <input type="text" id="custom-group-input" value="Milk and Milk Products">
+                
+                <div class="macro-inputs-grid">
+                  <div>
+                    <label>Calories (kcal/100g)</label>
+                    <input type="number" id="custom-cal-input" value="310.0" step="0.1">
+                  </div>
+                  <div>
+                    <label>Protein (g/100g)</label>
+                    <input type="number" id="custom-prot-input" value="18.0" step="0.1">
+                  </div>
+                  <div>
+                    <label>Fat (g/100g)</label>
+                    <input type="number" id="custom-fat-input" value="25.0" step="0.1">
+                  </div>
+                  <div>
+                    <label>Carbs (g/100g)</label>
+                    <input type="number" id="custom-carb-input" value="4.0" step="0.1">
+                  </div>
+                </div>
+                <label class="checkbox-label">
+                  <input type="checkbox" id="custom-shortlist-check" checked> Add directly to Scale Shortlist
+                </label>
+                <button class="btn-phone-primary" id="btn-save-custom-food" style="margin-top: 14px;">Save Brand Item &amp; Add to Scale</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Screen 2: Active Shortlist Screen -->
+          <div class="phone-tab-content hidden" id="tab-shortlist">
+            <div class="shortlist-meta-card">
+              <div class="meta-row">
+                <span class="meta-title">SCALE SHORTLIST CAPACITY</span>
+                <button class="btn-text-danger" id="phone-btn-clear-all">Clear All</button>
+              </div>
+              <div class="capacity-number" id="capacity-number-label">5 / 20 Slots Filled</div>
+              <div class="capacity-bar-track">
+                <div class="capacity-bar-fill" id="capacity-bar-fill" style="width: 25%;"></div>
+              </div>
+              <div class="meta-caption">Strictly capped at 20 foods for rotary wheel navigation.</div>
+            </div>
+
+            <div class="shortlist-cards-list" id="phone-shortlist-items">
+              <!-- Populated dynamically with active slots 0-19 -->
+            </div>
+          </div>
+
+          <!-- Screen 3: Wi-Fi REST Sync Screen -->
+          <div class="phone-tab-content hidden" id="tab-sync">
+            <!-- Connection Card -->
+            <div class="wifi-card">
+              <div class="wifi-card-header">
+                <span class="wifi-icon-badge connected" id="sync-status-icon">📶</span>
+                <div>
+                  <div class="wifi-card-sub text-teal">LOCAL WI-FI REST API</div>
+                  <div class="wifi-card-title connected" id="sync-conn-status">Online (smartscale.local)</div>
+                </div>
+              </div>
+              <div class="phone-search-box" style="margin-bottom: 8px;">
+                <input type="text" id="scale-host-input" value="smartscale.local" placeholder="Scale host or IP (e.g. 192.168.1.150)">
+              </div>
+              <button class="btn-phone-primary" id="btn-test-conn">Test Scale Connection (GET /api/status)</button>
+            </div>
+
+            <!-- Push to Scale Action Card -->
+            <div class="wifi-card">
+              <div class="wifi-card-sub text-teal">PUSH SHORTLIST TO SCALE</div>
+              <div class="sync-desc" id="sync-desc-text">Ready to sync active shortlist (5 items) to device.</div>
+
+              <div class="sync-progress-bar hidden" id="sync-progress-bar">
+                <div class="sync-progress-fill" id="sync-progress-fill"></div>
+              </div>
+
+              <button class="btn-phone-secondary" id="btn-phone-sync-now">Sync Shortlist via Wi-Fi</button>
+            </div>
+
+            <!-- Protocol Log Box -->
+            <div class="wifi-protocol-box">
+              <div class="protocol-header">HTTP REST TRANSACTION LOG</div>
+              <div class="protocol-content" id="protocol-log">Connected to local Wi-Fi. Ready to sync via HTTP POST.</div>
+            </div>
+          </div>
+
+          <!-- Bottom Navigation Bar -->
+          <nav class="android-bottom-nav">
+            <button class="nav-tab active" data-tab="tab-database">
+              <span class="nav-icon">📖</span>
+              <span class="nav-label">Database</span>
+            </button>
+            <button class="nav-tab" data-tab="tab-shortlist">
+              <span class="nav-icon">★</span>
+              <span class="nav-label">Shortlist</span>
+            </button>
+            <button class="nav-tab" data-tab="tab-sync">
+              <span class="nav-icon">📶</span>
+              <span class="nav-label">Wi-Fi Sync</span>
+            </button>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

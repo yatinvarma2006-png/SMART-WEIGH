@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="24dp">
+
+        <!-- 1. Wi-Fi Scale Connection Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_wifi_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/card_background"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/divider"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/iv_wifi_status_icon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_wifi"
+                    app:tint="@color/primary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_connection_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LOCAL WI-FI REST API"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintStart_toEndOf="@id/iv_wifi_status_icon"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_connection_sub"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Both phone and scale must be on the same local Wi-Fi router."
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="2dp"
+                    app:layout_constraintStart_toEndOf="@id/iv_wifi_status_icon"
+                    app:layout_constraintTop_toBottomOf="@id/tv_connection_title"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <!-- Scale Host / IP Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_scale_host"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    app:boxStrokeColor="@color/primary"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxBackgroundMode="outline"
+                    app:layout_constraintTop_toBottomOf="@id/tv_connection_sub">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_scale_host"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Scale Hostname or Local IP"
+                        android:text="smartscale.local"
+                        android:inputType="textUri"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Test Connection Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_test_conn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Test Scale Connection"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/primary"
+                    app:icon="@drawable/ic_wifi"
+                    app:layout_constraintTop_toBottomOf="@id/til_scale_host" />
+
+                <TextView
+                    android:id="@+id/tv_scale_status_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Status: Not tested yet"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/btn_test_conn" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 2. Sync Action Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_sync_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/card_background"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/divider"
+            app:layout_constraintTop_toBottomOf="@id/card_wifi_status">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tv_sync_card_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PUSH SHORTLIST TO SCALE"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_sync_item_summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ready to sync active shortlist (5 items) to device."
+                    android:textSize="14sp"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/tv_sync_card_title" />
+
+                <!-- Progress Bar -->
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/progress_sync"
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:layout_marginTop="12dp"
+                    android:indeterminate="true"
+                    android:visibility="invisible"
+                    app:indicatorColor="@color/primary"
+                    app:layout_constraintTop_toBottomOf="@id/tv_sync_item_summary" />
+
+                <!-- Sync Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_sync_now"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="Sync Shortlist via Wi-Fi"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="@color/secondary"
+                    android:textColor="@color/surface"
+                    app:icon="@drawable/ic_sync"
+                    app:layout_constraintTop_toBottomOf="@id/progress_sync" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 3. HTTP Protocol Console Log -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_console"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="1dp"
+            app:cardBackgroundColor="#1A202C"
+            app:layout_constraintTop_toBottomOf="@id/card_sync_action">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/tv_console_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HTTP REST API TRANSACTION LOG"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="#A0AEC0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_console_log"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Scale idle. Verify connection and tap Sync to transfer."
+                    android:textSize="12sp"
+                    android:textColor="#68D391"
+                    android:fontFamily="monospace"
+                    android:layout_marginTop="6dp"
+                    app:layout_constraintTop_toBottomOf="@id/tv_console_header" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
