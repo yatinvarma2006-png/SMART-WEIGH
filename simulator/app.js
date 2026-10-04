@@ -34,11 +34,21 @@
     protein: 0.0,
     fat: 0.0,
     carbs: 0.0,
-    grams: 0.0
+    grams: 0.0,
+    items: []
   };
 
-  // Active Shortlist (Max 20 items, stored in Flash NVS)
+  // Active Shortlist on ESP32 Scale (Max 20 items, stored in Flash NVS)
   let activeShortlist = [
+    { slot: 0, name: "Mustard Oil", cal100: 884.0, protein100: 0.0, fat100: 100.0, carb100: 0.0 },
+    { slot: 1, name: "Soya Bean (Tofu)", cal100: 141.0, protein100: 14.5, fat100: 8.5, carb100: 2.5 },
+    { slot: 2, name: "White Rice (Raw)", cal100: 356.0, protein100: 7.9, fat100: 0.5, carb100: 78.2 },
+    { slot: 3, name: "Paneer", cal100: 289.0, protein100: 18.3, fat100: 20.8, carb100: 3.4 },
+    { slot: 4, name: "Moong Dal", cal100: 334.0, protein100: 24.0, fat100: 1.3, carb100: 56.5 }
+  ];
+
+  // Active Shortlist in Companion Phone App (Max 20 items)
+  let phoneShortlist = [
     { slot: 0, name: "Mustard Oil", cal100: 884.0, protein100: 0.0, fat100: 100.0, carb100: 0.0 },
     { slot: 1, name: "Soya Bean (Tofu)", cal100: 141.0, protein100: 14.5, fat100: 8.5, carb100: 2.5 },
     { slot: 2, name: "White Rice (Raw)", cal100: 356.0, protein100: 7.9, fat100: 0.5, carb100: 78.2 },
@@ -71,6 +81,17 @@
   const idleMacroLine2 = document.getElementById('idle-macro-line2');
   const idleSessionTitle = document.getElementById('idle-session-title');
   const idleSessionSub = document.getElementById('idle-session-sub');
+
+  // Under-Phone Live Session Display Elements
+  const underPhoneSessionTitle = document.getElementById('under-phone-session-title');
+  const underPhoneSessionSub = document.getElementById('under-phone-session-sub');
+  const underPhonePPill = document.getElementById('under-phone-p-pill');
+  const underPhoneFPill = document.getElementById('under-phone-f-pill');
+  const underPhoneCPill = document.getElementById('under-phone-c-pill');
+  const underPhoneWtPill = document.getElementById('under-phone-wt-pill');
+  const underPhoneHistoryCount = document.getElementById('under-phone-history-count');
+  const underPhoneSessionItems = document.getElementById('under-phone-session-items');
+  const underPhoneBtnReset = document.getElementById('under-phone-btn-reset');
 
   // Tare view fields
   const tareFoodName = document.getElementById('tare-food-name');
@@ -175,6 +196,7 @@
 
     loadFoodsData();
     renderTft();
+    updateSessionDisplay();
     setupEventListeners();
     setupRotaryButton();
   }
@@ -204,6 +226,7 @@
     }
 
     scalePlatter.classList.toggle('depressed', rawScaleWeight > 0);
+    scalePlatter.style.setProperty('--load-pct', Math.min(100, Math.max(0, (rawScaleWeight / MAX_CAPACITY) * 100)) + '%');
 
     // Feed settling window
     feedSettling(getNetWeight());
@@ -265,13 +288,19 @@
         viewIdle.classList.remove('hidden');
 
         idleLiveWeight.textContent = net.toFixed(1) + " g";
-        foodSlotLabel.textContent = `FOOD ITEM (${selectedIndex + 1}/${activeShortlist.length})`;
-        idleFoodName.textContent = currentFood.name;
-        idleMacroLine1.textContent = `Per 100g: ${Math.round(currentFood.cal100)} kcal | P:${currentFood.protein100.toFixed(1)}g`;
-        idleMacroLine2.textContent = `F:${currentFood.fat100.toFixed(1)}g | C:${currentFood.carb100.toFixed(1)}g`;
+        if (activeShortlist.length === 0) {
+          foodSlotLabel.textContent = "SHORTLIST EMPTY (0/20)";
+          idleFoodName.textContent = "Add Foods in Phone App";
+          idleMacroLine1.textContent = "Tap ★ in Phone Database";
+          idleMacroLine2.textContent = "to load items into scale";
+        } else {
+          foodSlotLabel.textContent = `FOOD ITEM (${selectedIndex + 1}/${activeShortlist.length})`;
+          idleFoodName.textContent = currentFood.name;
+          idleMacroLine1.textContent = `Per 100g: ${Math.round(currentFood.cal100)} kcal | P:${currentFood.protein100.toFixed(1)}g`;
+          idleMacroLine2.textContent = `F:${currentFood.fat100.toFixed(1)}g | C:${currentFood.carb100.toFixed(1)}g`;
+        }
 
-        idleSessionTitle.textContent = `Session (${session.itemCount} items): ${Math.round(session.calories)} kcal`;
-        idleSessionSub.textContent = `P:${session.protein.toFixed(1)}g  F:${session.fat.toFixed(1)}g  C:${session.carbs.toFixed(1)}g`;
+        updateSessionDisplay();
         break;
 
       case STATE_TARE_PROMPT:
@@ -431,10 +460,22 @@
         session.carbs += carbs;
         session.grams += currentSettledWeight;
 
+        if (!session.items) session.items = [];
+        session.items.unshift({
+          name: food.name,
+          grams: currentSettledWeight,
+          calories: cals,
+          protein: prot,
+          fat: fat,
+          carbs: carbs,
+          time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+        });
+
         logSerial(`[SESSION] Added: ${food.name} (${currentSettledWeight.toFixed(1)}g) -> +${cals.toFixed(1)} kcal`);
         logSerial(`[SESSION] Running Total (${session.itemCount} items): ${session.calories.toFixed(1)} kcal | P:${session.protein.toFixed(1)}g | F:${session.fat.toFixed(1)}g | C:${session.carbs.toFixed(1)}g`);
 
         showToast("COMMITTED!", "Added to Session Total");
+        updateSessionDisplay();
         currentState = STATE_IDLE_SELECT;
         renderTft();
         break;
@@ -443,11 +484,60 @@
 
   function handleLongPress() {
     // Reset running session totals
-    session = { itemCount: 0, calories: 0, protein: 0, fat: 0, carbs: 0, grams: 0 };
+    session = { itemCount: 0, calories: 0, protein: 0, fat: 0, carbs: 0, grams: 0, items: [] };
     logSerial("[SESSION] Running session totals reset to 0.");
     showToast("SESSION RESET!", "Totals cleared to 0", true);
+    updateSessionDisplay();
     currentState = STATE_IDLE_SELECT;
     renderTft();
+  }
+
+  // -------------------------------------------------------------
+  // Live Session Display Synchronizer (Scale Screen + Under Phone)
+  // -------------------------------------------------------------
+  function updateSessionDisplay() {
+    const titleText = `Session (${session.itemCount} items): ${Math.round(session.calories)} kcal`;
+    const subText = `P:${session.protein.toFixed(1)}g  F:${session.fat.toFixed(1)}g  C:${session.carbs.toFixed(1)}g`;
+
+    if (idleSessionTitle) idleSessionTitle.textContent = titleText;
+    if (idleSessionSub) idleSessionSub.textContent = subText;
+
+    if (underPhoneSessionTitle) underPhoneSessionTitle.textContent = titleText;
+    if (underPhoneSessionSub) underPhoneSessionSub.textContent = subText;
+
+    let totalMacroGrams = session.protein + session.fat + session.carbs;
+    let pPct = totalMacroGrams > 0 ? Math.round((session.protein / totalMacroGrams) * 100) : 0;
+    let fPct = totalMacroGrams > 0 ? Math.round((session.fat / totalMacroGrams) * 100) : 0;
+    let cPct = totalMacroGrams > 0 ? Math.max(0, 100 - pPct - fPct) : 0;
+
+    if (underPhonePPill) underPhonePPill.textContent = `P: ${session.protein.toFixed(1)}g (${pPct}%)`;
+    if (underPhoneFPill) underPhoneFPill.textContent = `F: ${session.fat.toFixed(1)}g (${fPct}%)`;
+    if (underPhoneCPill) underPhoneCPill.textContent = `C: ${session.carbs.toFixed(1)}g (${cPct}%)`;
+    if (underPhoneWtPill) underPhoneWtPill.textContent = `⚖ ${session.grams.toFixed(1)}g`;
+
+    if (underPhoneHistoryCount) {
+      underPhoneHistoryCount.textContent = (session.items ? session.items.length : session.itemCount);
+    }
+
+    if (underPhoneSessionItems) {
+      if (!session.items || session.items.length === 0) {
+        underPhoneSessionItems.innerHTML = `<div class="session-empty-hint">Weigh items on the scale and click to commit them to this session total.</div>`;
+      } else {
+        underPhoneSessionItems.innerHTML = session.items.map((it, idx) => `
+          <div class="session-item-row">
+            <div class="session-item-name">
+              <span class="session-item-idx">#${idx + 1}</span>
+              <strong>${it.name}</strong>
+              <span class="session-item-wt">(${it.grams.toFixed(1)}g)</span>
+            </div>
+            <div class="session-item-macros">
+              <span class="session-item-cal">${Math.round(it.calories)} kcal</span>
+              <span class="session-item-pfc">P:${it.protein.toFixed(1)}g F:${it.fat.toFixed(1)}g C:${it.carbs.toFixed(1)}g</span>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
   }
 
   // -------------------------------------------------------------
@@ -508,15 +598,27 @@
   // -------------------------------------------------------------
   // Android Companion App Logic (Room DB, Shortlist, Wi-Fi Sync)
   // -------------------------------------------------------------
+  let allFoods = [];
+
   async function loadFoodsData() {
     try {
-      const res = await fetch('foods.json');
-      allFoods = await res.json();
+      if (window.IFCT_FOODS_DATA && Array.isArray(window.IFCT_FOODS_DATA) && window.IFCT_FOODS_DATA.length > 0) {
+        allFoods = window.IFCT_FOODS_DATA;
+      } else {
+        const res = await fetch('foods.json');
+        allFoods = await res.json();
+      }
       dbCountLabel.textContent = `${allFoods.length} Raw Foods (IFCT 2017) • Tap ★ to shortlist`;
       renderPhoneFoodList(allFoods);
       renderPhoneShortlist();
     } catch (e) {
-      console.error("Error loading foods.json:", e);
+      console.warn("fetch('foods.json') failed, falling back to embedded dataset:", e);
+      if (window.IFCT_FOODS_DATA && Array.isArray(window.IFCT_FOODS_DATA)) {
+        allFoods = window.IFCT_FOODS_DATA;
+        dbCountLabel.textContent = `${allFoods.length} Raw Foods (IFCT 2017) • Tap ★ to shortlist`;
+        renderPhoneFoodList(allFoods);
+        renderPhoneShortlist();
+      }
     }
   }
 
@@ -551,6 +653,7 @@
 
   function togglePhoneShortlist(food) {
     let idx = phoneShortlist.findIndex(s => s.name === food.name);
+    let newlyAdded = false;
     if (idx !== -1) {
       // Remove
       phoneShortlist.splice(idx, 1);
@@ -560,6 +663,7 @@
         alert("⚠️ Maximum 20 items allowed in shortlist!\n\nRemove an item before adding another.");
         return;
       }
+      newlyAdded = true;
       phoneShortlist.push({
         slot: phoneShortlist.length,
         name: food.name,
@@ -570,8 +674,26 @@
       });
     }
 
+    // Re-index slots
+    phoneShortlist.forEach((item, i) => item.slot = i);
+
     renderPhoneShortlist();
     renderPhoneFoodList(filterFoods(phoneSearchInput.value));
+
+    // Live-sync scale hardware shortlist and update display
+    activeShortlist = [...phoneShortlist];
+    if (newlyAdded) {
+      selectedIndex = activeShortlist.length - 1;
+      logSerial(`[SHORTLIST] Phone starred "${food.name}". Synced to Scale Slot ${String(selectedIndex).padStart(2, '0')}.`);
+      showToast("SCALE UPDATED", `Slot ${selectedIndex + 1}/${activeShortlist.length}: ${food.name}`);
+    } else {
+      if (selectedIndex >= activeShortlist.length) {
+        selectedIndex = Math.max(0, activeShortlist.length - 1);
+      }
+      logSerial(`[SHORTLIST] Removed "${food.name}". Scale now has ${activeShortlist.length} items.`);
+      showToast("SCALE SYNCED", `${activeShortlist.length} Items Remaining`);
+    }
+    renderTft();
   }
 
   function filterFoods(query) {
@@ -606,8 +728,15 @@
 
       card.querySelector('.btn-remove-item').addEventListener('click', () => {
         phoneShortlist.splice(index, 1);
+        phoneShortlist.forEach((it, i) => it.slot = i);
         renderPhoneShortlist();
         renderPhoneFoodList(filterFoods(phoneSearchInput.value));
+        activeShortlist = [...phoneShortlist];
+        if (selectedIndex >= activeShortlist.length) {
+          selectedIndex = Math.max(0, activeShortlist.length - 1);
+        }
+        renderTft();
+        showToast("SCALE SYNCED", `${activeShortlist.length} Items Remaining`);
       });
 
       phoneShortlistItems.appendChild(card);
@@ -763,6 +892,11 @@
         phoneShortlist = [];
         renderPhoneShortlist();
         renderPhoneFoodList(filterFoods(phoneSearchInput.value));
+        activeShortlist = [];
+        selectedIndex = 0;
+        renderTft();
+        showToast("SHORTLIST CLEARED", "All scale items removed", true);
+        logSerial(`[SHORTLIST] Scale shortlist cleared to 0 items.`);
       }
     });
 
@@ -775,7 +909,15 @@
 
     if (btnCloseModal) {
       btnCloseModal.addEventListener('click', () => {
-        customFoodModal.classList.add('hidden');
+        if (customFoodModal) customFoodModal.classList.add('hidden');
+      });
+    }
+
+    if (customFoodModal) {
+      customFoodModal.addEventListener('click', (e) => {
+        if (e.target === customFoodModal) {
+          customFoodModal.classList.add('hidden');
+        }
       });
     }
 
@@ -793,55 +935,74 @@
     });
 
     if (btnSaveCustomFood) {
-      btnSaveCustomFood.addEventListener('click', () => {
-        let brand = (customBrandInput ? customBrandInput.value.trim() : "");
-        let name = customNameInput.value.trim();
-        let group = customGroupInput.value.trim() || "Milk and Milk Products";
-        let cal = parseFloat(customCalInput.value) || 0;
-        let prot = parseFloat(customProtInput.value) || 0;
-        let fat = parseFloat(customFatInput.value) || 0;
-        let carb = parseFloat(customCarbInput.value) || 0;
+      btnSaveCustomFood.addEventListener('click', (e) => {
+        if (e) e.preventDefault();
+        try {
+          let brand = (customBrandInput ? customBrandInput.value.trim() : "");
+          let name = (customNameInput ? customNameInput.value.trim() : "");
+          let group = (customGroupInput ? customGroupInput.value.trim() : "") || "Milk and Milk Products";
+          let cal = parseFloat(customCalInput ? customCalInput.value : "0") || 0;
+          let prot = parseFloat(customProtInput ? customProtInput.value : "0") || 0;
+          let fat = parseFloat(customFatInput ? customFatInput.value : "0") || 0;
+          let carb = parseFloat(customCarbInput ? customCarbInput.value : "0") || 0;
 
-        if (!name) {
-          alert("Please enter a name for your custom / brand food!");
-          return;
-        }
-
-        // Format nice full name (e.g. "Amul Malai Paneer", "Pintola Peanut Butter")
-        let fullName = brand && !name.toLowerCase().includes(brand.toLowerCase())
-          ? `${brand} ${name}`
-          : name;
-
-        let newFood = {
-          id: Date.now(),
-          code: "BRAND",
-          name: fullName,
-          group: group,
-          cal100: cal,
-          protein100: prot,
-          fat100: fat,
-          carb100: carb,
-          isShortlisted: 0
-        };
-
-        // Add to database
-        allFoods.unshift(newFood);
-        dbCountLabel.textContent = `${allFoods.length} Foods (IFCT + Custom Brands) • Tap ★ to shortlist`;
-
-        // Check if user requested auto-shortlisting
-        if (customShortlistCheck.checked) {
-          if (phoneShortlist.length < 20) {
-            newFood.isShortlisted = 1;
-            phoneShortlist.unshift(newFood);
-            renderPhoneShortlist();
-          } else {
-            alert("Food saved, but shortlist is full (20/20 max). Remove an item to add it.");
+          if (!name) {
+            alert("Please enter a name for your custom / brand food!");
+            return;
           }
-        }
 
-        customFoodModal.classList.add('hidden');
-        renderPhoneFoodList(filterFoods(phoneSearchInput.value));
-        showToast("BRAND SAVED", `Added ${fullName} to Scale Shortlist!`);
+          // Format nice full name (e.g. "Amul Malai Paneer", "Pintola Peanut Butter")
+          let fullName = brand && !name.toLowerCase().includes(brand.toLowerCase())
+            ? `${brand} ${name}`
+            : name;
+
+          let newFood = {
+            id: Date.now(),
+            code: "BRAND",
+            name: fullName,
+            group: group,
+            cal100: cal,
+            protein100: prot,
+            fat100: fat,
+            carb100: carb,
+            isShortlisted: 0
+          };
+
+          // Add to database
+          allFoods.unshift(newFood);
+          if (dbCountLabel) {
+            dbCountLabel.textContent = `${allFoods.length} Foods (IFCT + Custom Brands) • Tap ★ to shortlist`;
+          }
+
+          // Check if user requested auto-shortlisting
+          if (customShortlistCheck && customShortlistCheck.checked) {
+            if (phoneShortlist.length < 20) {
+              newFood.isShortlisted = 1;
+              newFood.slot = 0;
+              phoneShortlist.unshift(newFood);
+              phoneShortlist.forEach((item, idx) => item.slot = idx);
+              renderPhoneShortlist();
+
+              // Immediately sync and display on scale hardware
+              activeShortlist = [...phoneShortlist];
+              selectedIndex = 0; // Focus on the newly added food
+              renderTft();
+              logSerial(`[SHORTLIST] Added Brand Food "${fullName}" directly to Scale Slot 00.`);
+              showToast("SCALE UPDATED", `Slot 1/${activeShortlist.length}: ${fullName}`);
+            } else {
+              alert("Food saved, but shortlist is full (20/20 max). Remove an item to add it.");
+            }
+          }
+
+          if (customFoodModal) {
+            customFoodModal.classList.add('hidden');
+          }
+          let query = (phoneSearchInput && phoneSearchInput.value) ? phoneSearchInput.value : "";
+          renderPhoneFoodList(filterFoods(query));
+        } catch (err) {
+          console.error("Error saving custom food:", err);
+          alert("Error saving custom food: " + err.message);
+        }
       });
     }
 
@@ -870,6 +1031,17 @@
         }
       });
     });
+
+    // Reset Session Total from Under-Phone Widget
+    if (underPhoneBtnReset) {
+      underPhoneBtnReset.addEventListener('click', () => {
+        session = { itemCount: 0, calories: 0, protein: 0, fat: 0, carbs: 0, grams: 0, items: [] };
+        logSerial("[SESSION] Running session totals reset from companion panel.");
+        showToast("SESSION RESET!", "Totals cleared to 0", true);
+        updateSessionDisplay();
+        renderTft();
+      });
+    }
   }
 
   // Run boot on load

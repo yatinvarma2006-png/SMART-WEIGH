@@ -10,6 +10,9 @@ import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonPrimitive;
 import com.google.gson.reflect.TypeToken;
 
 import java.io.InputStream;
@@ -70,7 +73,27 @@ public abstract class AppDatabase extends RoomDatabase {
             InputStreamReader reader = new InputStreamReader(is, StandardCharsets.UTF_8);
 
             Type listType = new TypeToken<List<FoodItem>>() {}.getType();
-            List<FoodItem> items = new Gson().fromJson(reader, listType);
+            Gson gson = new GsonBuilder()
+                    .registerTypeAdapter(boolean.class, (JsonDeserializer<Boolean>) (json, typeOfT, ctx) -> {
+                        if (json != null && json.isJsonPrimitive()) {
+                            JsonPrimitive prim = json.getAsJsonPrimitive();
+                            if (prim.isBoolean()) return prim.getAsBoolean();
+                            if (prim.isNumber()) return prim.getAsInt() != 0;
+                            if (prim.isString()) return "true".equalsIgnoreCase(prim.getAsString()) || "1".equals(prim.getAsString());
+                        }
+                        return false;
+                    })
+                    .registerTypeAdapter(Boolean.class, (JsonDeserializer<Boolean>) (json, typeOfT, ctx) -> {
+                        if (json != null && json.isJsonPrimitive()) {
+                            JsonPrimitive prim = json.getAsJsonPrimitive();
+                            if (prim.isBoolean()) return prim.getAsBoolean();
+                            if (prim.isNumber()) return prim.getAsInt() != 0;
+                            if (prim.isString()) return "true".equalsIgnoreCase(prim.getAsString()) || "1".equals(prim.getAsString());
+                        }
+                        return false;
+                    })
+                    .create();
+            List<FoodItem> items = gson.fromJson(reader, listType);
             reader.close();
             is.close();
 

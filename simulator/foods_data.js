@@ -1,4 +1,4 @@
-[
+window.IFCT_FOODS_DATA = [
   {
     "id": 1,
     "code": "A001",
@@ -8,7 +8,7 @@
     "protein100": 14.6,
     "fat100": 5.7,
     "carb100": 60,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
     "protein100": 13.3,
     "fat100": 5.6,
     "carb100": 61.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
     "protein100": 11,
     "fat100": 5.4,
     "carb100": 61.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
     "protein100": 10.9,
     "fat100": 1.3,
     "carb100": 61.3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
     "protein100": 10,
     "fat100": 1.7,
     "carb100": 67.7,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 6,
@@ -63,7 +63,7 @@
     "protein100": 8.8,
     "fat100": 3.8,
     "carb100": 64.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 7,
@@ -74,7 +74,7 @@
     "protein100": 3.6,
     "fat100": 1.4,
     "carb100": 22.7,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 8,
@@ -85,7 +85,7 @@
     "protein100": 4.2,
     "fat100": 1.4,
     "carb100": 16.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 9,
@@ -96,7 +96,7 @@
     "protein100": 13.1,
     "fat100": 5.5,
     "carb100": 53.7,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 10,
@@ -107,7 +107,7 @@
     "protein100": 7.2,
     "fat100": 1.9,
     "carb100": 66.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 11,
@@ -118,7 +118,7 @@
     "protein100": 7.4,
     "fat100": 1.1,
     "carb100": 76.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 12,
@@ -129,7 +129,7 @@
     "protein100": 7.5,
     "fat100": 1.6,
     "carb100": 77.7,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 13,
@@ -140,7 +140,7 @@
     "protein100": 9.2,
     "fat100": 1.2,
     "carb100": 74.8,
-    "isShortlisted": true
+    "isShortlisted": 1
   },
   {
     "id": 14,
@@ -151,7 +151,7 @@
     "protein100": 7.8,
     "fat100": 0.6,
     "carb100": 77.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 15,
@@ -162,7 +162,7 @@
     "protein100": 7.9,
     "fat100": 0.5,
     "carb100": 78.2,
-    "isShortlisted": true
+    "isShortlisted": 1
   },
   {
     "id": 16,
@@ -173,7 +173,7 @@
     "protein100": 10.1,
     "fat100": 3.9,
     "carb100": 65.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 17,
@@ -184,7 +184,7 @@
     "protein100": 8.9,
     "fat100": 2.6,
     "carb100": 66.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 18,
@@ -195,7 +195,7 @@
     "protein100": 10.4,
     "fat100": 0.8,
     "carb100": 74.3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 19,
@@ -206,7 +206,7 @@
     "protein100": 10.6,
     "fat100": 1.5,
     "carb100": 64.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 20,
@@ -217,7 +217,7 @@
     "protein100": 10.6,
     "fat100": 1.5,
     "carb100": 64.7,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 21,
@@ -228,7 +228,7 @@
     "protein100": 10.8,
     "fat100": 1.5,
     "carb100": 69.1,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 22,
@@ -239,7 +239,7 @@
     "protein100": 11.4,
     "fat100": 0.7,
     "carb100": 68.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 23,
@@ -250,7 +250,7 @@
     "protein100": 9.7,
     "fat100": 0.5,
     "carb100": 70.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 24,
@@ -261,7 +261,7 @@
     "protein100": 10.4,
     "fat100": 0.5,
     "carb100": 71.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 25,
@@ -272,7 +272,7 @@
     "protein100": 21.6,
     "fat100": 5.3,
     "carb100": 46.7,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 26,
@@ -283,7 +283,7 @@
     "protein100": 18.8,
     "fat100": 5.1,
     "carb100": 39.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 27,
@@ -294,7 +294,7 @@
     "protein100": 23.1,
     "fat100": 1.7,
     "carb100": 51,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 28,
@@ -305,7 +305,7 @@
     "protein100": 22,
     "fat100": 1.6,
     "carb100": 44,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 29,
@@ -316,7 +316,7 @@
     "protein100": 20.4,
     "fat100": 1.2,
     "carb100": 54.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 30,
@@ -327,7 +327,7 @@
     "protein100": 21.3,
     "fat100": 1.1,
     "carb100": 53.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 31,
@@ -338,7 +338,7 @@
     "protein100": 19.9,
     "fat100": 0.9,
     "carb100": 43.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 32,
@@ -349,7 +349,7 @@
     "protein100": 19.9,
     "fat100": 1,
     "carb100": 45.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 33,
@@ -360,7 +360,7 @@
     "protein100": 19.8,
     "fat100": 0.9,
     "carb100": 44.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 34,
@@ -371,7 +371,7 @@
     "protein100": 23.9,
     "fat100": 1.4,
     "carb100": 52.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 35,
@@ -382,7 +382,7 @@
     "protein100": 22.5,
     "fat100": 1.1,
     "carb100": 46.1,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 36,
@@ -393,7 +393,7 @@
     "protein100": 21.7,
     "fat100": 0.6,
     "carb100": 57.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 37,
@@ -404,7 +404,7 @@
     "protein100": 24.4,
     "fat100": 0.8,
     "carb100": 52.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 38,
@@ -415,7 +415,7 @@
     "protein100": 22.5,
     "fat100": 0.6,
     "carb100": 48.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 39,
@@ -426,7 +426,7 @@
     "protein100": 22.9,
     "fat100": 0.6,
     "carb100": 47.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 40,
@@ -437,7 +437,7 @@
     "protein100": 19.8,
     "fat100": 1.8,
     "carb100": 52.1,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 41,
@@ -448,7 +448,7 @@
     "protein100": 20.4,
     "fat100": 1.9,
     "carb100": 48.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 42,
@@ -459,7 +459,7 @@
     "protein100": 19,
     "fat100": 1.6,
     "carb100": 49.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 43,
@@ -470,7 +470,7 @@
     "protein100": 19.5,
     "fat100": 1.7,
     "carb100": 48.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 44,
@@ -481,7 +481,7 @@
     "protein100": 19.9,
     "fat100": 1.8,
     "carb100": 48.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 45,
@@ -492,7 +492,7 @@
     "protein100": 21.7,
     "fat100": 1.6,
     "carb100": 55.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 46,
@@ -503,7 +503,7 @@
     "protein100": 20.5,
     "fat100": 1.4,
     "carb100": 42.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 47,
@@ -514,7 +514,7 @@
     "protein100": 20,
     "fat100": 0.7,
     "carb100": 51.3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 48,
@@ -525,7 +525,7 @@
     "protein100": 35.6,
     "fat100": 19.8,
     "carb100": 12.8,
-    "isShortlisted": true
+    "isShortlisted": 1
   },
   {
     "id": 49,
@@ -536,7 +536,7 @@
     "protein100": 37.8,
     "fat100": 19.4,
     "carb100": 10.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 50,
@@ -547,7 +547,7 @@
     "protein100": 8,
     "fat100": 1.4,
     "carb100": 5.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 51,
@@ -558,7 +558,7 @@
     "protein100": 3.3,
     "fat100": 0.7,
     "carb100": 2.3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 52,
@@ -569,7 +569,7 @@
     "protein100": 3.9,
     "fat100": 0.6,
     "carb100": 2.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 53,
@@ -580,7 +580,7 @@
     "protein100": 3.1,
     "fat100": 0.5,
     "carb100": 2.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 54,
@@ -591,7 +591,7 @@
     "protein100": 3.5,
     "fat100": 0.4,
     "carb100": 1.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 55,
@@ -602,7 +602,7 @@
     "protein100": 2.8,
     "fat100": 0.3,
     "carb100": 1.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 56,
@@ -613,7 +613,7 @@
     "protein100": 1.6,
     "fat100": 0.5,
     "carb100": 2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 57,
@@ -624,7 +624,7 @@
     "protein100": 2.5,
     "fat100": 0.4,
     "carb100": 2.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 58,
@@ -635,7 +635,7 @@
     "protein100": 2.4,
     "fat100": 0.8,
     "carb100": 3.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 59,
@@ -646,7 +646,7 @@
     "protein100": 2.5,
     "fat100": 0.8,
     "carb100": 7.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 60,
@@ -657,7 +657,7 @@
     "protein100": 2.6,
     "fat100": 0.8,
     "carb100": 6.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 61,
@@ -668,7 +668,7 @@
     "protein100": 4.3,
     "fat100": 0.5,
     "carb100": 5.1,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 62,
@@ -679,7 +679,7 @@
     "protein100": 1.6,
     "fat100": 0.1,
     "carb100": 2.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 63,
@@ -690,7 +690,7 @@
     "protein100": 3.6,
     "fat100": 0.3,
     "carb100": 2.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 64,
@@ -701,7 +701,7 @@
     "protein100": 1.4,
     "fat100": 0.1,
     "carb100": 3.3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 65,
@@ -712,7 +712,7 @@
     "protein100": 1.4,
     "fat100": 0.2,
     "carb100": 3.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 66,
@@ -723,7 +723,7 @@
     "protein100": 3.9,
     "fat100": 0.4,
     "carb100": 3.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 67,
@@ -734,7 +734,7 @@
     "protein100": 3.4,
     "fat100": 1.4,
     "carb100": 3.7,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 68,
@@ -745,7 +745,7 @@
     "protein100": 6.4,
     "fat100": 1.6,
     "carb100": 5.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 69,
@@ -756,7 +756,7 @@
     "protein100": 3.7,
     "fat100": 0.8,
     "carb100": 2.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 70,
@@ -767,7 +767,7 @@
     "protein100": 5.6,
     "fat100": 0.8,
     "carb100": 4.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 71,
@@ -778,7 +778,7 @@
     "protein100": 1.9,
     "fat100": 1.1,
     "carb100": 4.1,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 72,
@@ -789,7 +789,7 @@
     "protein100": 1.9,
     "fat100": 1.1,
     "carb100": 4.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 73,
@@ -800,7 +800,7 @@
     "protein100": 3.1,
     "fat100": 0.4,
     "carb100": 6.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 74,
@@ -811,7 +811,7 @@
     "protein100": 1.5,
     "fat100": 0.3,
     "carb100": 3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 75,
@@ -822,7 +822,7 @@
     "protein100": 3.5,
     "fat100": 0.5,
     "carb100": 2.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 76,
@@ -833,7 +833,7 @@
     "protein100": 1.4,
     "fat100": 0.3,
     "carb100": 1.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 77,
@@ -844,7 +844,7 @@
     "protein100": 5.6,
     "fat100": 1.1,
     "carb100": 9.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 78,
@@ -855,7 +855,7 @@
     "protein100": 5.3,
     "fat100": 0.7,
     "carb100": 5.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 79,
@@ -866,7 +866,7 @@
     "protein100": 4.2,
     "fat100": 0.7,
     "carb100": 4.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 80,
@@ -877,7 +877,7 @@
     "protein100": 2.2,
     "fat100": 0.5,
     "carb100": 2.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 81,
@@ -888,7 +888,7 @@
     "protein100": 1.6,
     "fat100": 0.3,
     "carb100": 2.3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 82,
@@ -899,7 +899,7 @@
     "protein100": 2.1,
     "fat100": 0.6,
     "carb100": 2.1,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 83,
@@ -910,7 +910,7 @@
     "protein100": 5.8,
     "fat100": 0.5,
     "carb100": 10,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 84,
@@ -921,7 +921,7 @@
     "protein100": 0.8,
     "fat100": 0.1,
     "carb100": 2.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 85,
@@ -932,7 +932,7 @@
     "protein100": 1.3,
     "fat100": 0.4,
     "carb100": 1.7,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 86,
@@ -943,7 +943,7 @@
     "protein100": 2.9,
     "fat100": 1,
     "carb100": 5.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 87,
@@ -954,7 +954,7 @@
     "protein100": 1.4,
     "fat100": 0.2,
     "carb100": 2.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 88,
@@ -965,7 +965,7 @@
     "protein100": 1.3,
     "fat100": 0.2,
     "carb100": 2.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 89,
@@ -976,7 +976,7 @@
     "protein100": 1.6,
     "fat100": 0.3,
     "carb100": 2.3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 90,
@@ -987,7 +987,7 @@
     "protein100": 0.5,
     "fat100": 0.1,
     "carb100": 1.7,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 91,
@@ -998,7 +998,7 @@
     "protein100": 0.4,
     "fat100": 0.1,
     "carb100": 2.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 92,
@@ -1009,7 +1009,7 @@
     "protein100": 0.5,
     "fat100": 0.1,
     "carb100": 2.3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 93,
@@ -1020,7 +1020,7 @@
     "protein100": 1.8,
     "fat100": 0.4,
     "carb100": 3.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 94,
@@ -1031,7 +1031,7 @@
     "protein100": 1.8,
     "fat100": 0.3,
     "carb100": 2.7,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 95,
@@ -1042,7 +1042,7 @@
     "protein100": 1.4,
     "fat100": 0.3,
     "carb100": 3.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 96,
@@ -1053,7 +1053,7 @@
     "protein100": 1.5,
     "fat100": 0.3,
     "carb100": 3.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 97,
@@ -1064,7 +1064,7 @@
     "protein100": 1.4,
     "fat100": 0.3,
     "carb100": 4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 98,
@@ -1075,7 +1075,7 @@
     "protein100": 1.5,
     "fat100": 0.3,
     "carb100": 3.3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 99,
@@ -1086,7 +1086,7 @@
     "protein100": 1.4,
     "fat100": 0.4,
     "carb100": 3.1,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 100,
@@ -1097,7 +1097,7 @@
     "protein100": 1.8,
     "fat100": 0.3,
     "carb100": 3.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 101,
@@ -1108,7 +1108,7 @@
     "protein100": 1.5,
     "fat100": 0.4,
     "carb100": 3.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 102,
@@ -1119,7 +1119,7 @@
     "protein100": 1.7,
     "fat100": 0.3,
     "carb100": 4.1,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 103,
@@ -1130,7 +1130,7 @@
     "protein100": 1.4,
     "fat100": 0.3,
     "carb100": 3.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 104,
@@ -1141,7 +1141,7 @@
     "protein100": 1.6,
     "fat100": 0.3,
     "carb100": 2.7,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 105,
@@ -1152,7 +1152,7 @@
     "protein100": 1.5,
     "fat100": 0.3,
     "carb100": 4.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 106,
@@ -1163,7 +1163,7 @@
     "protein100": 1.6,
     "fat100": 0.4,
     "carb100": 3.3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 107,
@@ -1174,7 +1174,7 @@
     "protein100": 1.6,
     "fat100": 0.3,
     "carb100": 4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 108,
@@ -1185,7 +1185,7 @@
     "protein100": 1.3,
     "fat100": 0.3,
     "carb100": 3.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 109,
@@ -1196,7 +1196,7 @@
     "protein100": 1.2,
     "fat100": 0.4,
     "carb100": 2.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 110,
@@ -1207,7 +1207,7 @@
     "protein100": 1.5,
     "fat100": 0.3,
     "carb100": 4.1,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 111,
@@ -1218,7 +1218,7 @@
     "protein100": 1.3,
     "fat100": 0.3,
     "carb100": 3.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 112,
@@ -1229,7 +1229,7 @@
     "protein100": 1.4,
     "fat100": 0.3,
     "carb100": 3.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 113,
@@ -1240,7 +1240,7 @@
     "protein100": 1.4,
     "fat100": 0.4,
     "carb100": 3.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 114,
@@ -1251,7 +1251,7 @@
     "protein100": 1.5,
     "fat100": 0.3,
     "carb100": 3.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 115,
@@ -1262,7 +1262,7 @@
     "protein100": 3.9,
     "fat100": 0.2,
     "carb100": 2.1,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 116,
@@ -1273,7 +1273,7 @@
     "protein100": 1.1,
     "fat100": 0.3,
     "carb100": 1.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 117,
@@ -1284,7 +1284,7 @@
     "protein100": 1.5,
     "fat100": 0.5,
     "carb100": 2.1,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 118,
@@ -1295,7 +1295,7 @@
     "protein100": 1.4,
     "fat100": 0.4,
     "carb100": 2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 119,
@@ -1306,7 +1306,7 @@
     "protein100": 2.2,
     "fat100": 0.4,
     "carb100": 2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 120,
@@ -1317,7 +1317,7 @@
     "protein100": 1,
     "fat100": 0.2,
     "carb100": 2.3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 121,
@@ -1328,7 +1328,7 @@
     "protein100": 0.7,
     "fat100": 0.2,
     "carb100": 3.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 122,
@@ -1339,7 +1339,7 @@
     "protein100": 3.6,
     "fat100": 0.4,
     "carb100": 4.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 123,
@@ -1350,7 +1350,7 @@
     "protein100": 0.8,
     "fat100": 0.3,
     "carb100": 3.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 124,
@@ -1361,7 +1361,7 @@
     "protein100": 0.9,
     "fat100": 0.2,
     "carb100": 2.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 125,
@@ -1372,7 +1372,7 @@
     "protein100": 2.7,
     "fat100": 1.3,
     "carb100": 11.7,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 126,
@@ -1383,7 +1383,7 @@
     "protein100": 0.7,
     "fat100": 0.2,
     "carb100": 3.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 127,
@@ -1394,7 +1394,7 @@
     "protein100": 0.8,
     "fat100": 0.2,
     "carb100": 2.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 128,
@@ -1405,7 +1405,7 @@
     "protein100": 1,
     "fat100": 0.2,
     "carb100": 3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 129,
@@ -1416,7 +1416,7 @@
     "protein100": 2.6,
     "fat100": 0.1,
     "carb100": 3.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 130,
@@ -1427,7 +1427,7 @@
     "protein100": 3.1,
     "fat100": 0.6,
     "carb100": 2.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 131,
@@ -1438,7 +1438,7 @@
     "protein100": 3.7,
     "fat100": 0.6,
     "carb100": 2.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 132,
@@ -1449,7 +1449,7 @@
     "protein100": 2.5,
     "fat100": 0.3,
     "carb100": 2.7,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 133,
@@ -1460,7 +1460,7 @@
     "protein100": 2.1,
     "fat100": 0.2,
     "carb100": 2.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 134,
@@ -1471,7 +1471,7 @@
     "protein100": 2,
     "fat100": 0.4,
     "carb100": 3.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 135,
@@ -1482,7 +1482,7 @@
     "protein100": 5.8,
     "fat100": 0.4,
     "carb100": 11.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 136,
@@ -1493,7 +1493,7 @@
     "protein100": 1.6,
     "fat100": 0.4,
     "carb100": 1.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 137,
@@ -1504,7 +1504,7 @@
     "protein100": 1.4,
     "fat100": 0.2,
     "carb100": 2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 138,
@@ -1515,7 +1515,7 @@
     "protein100": 1.2,
     "fat100": 0.2,
     "carb100": 2.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 139,
@@ -1526,7 +1526,7 @@
     "protein100": 2.1,
     "fat100": 0.2,
     "carb100": 3.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 140,
@@ -1537,7 +1537,7 @@
     "protein100": 0.7,
     "fat100": 0.1,
     "carb100": 10.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 141,
@@ -1548,7 +1548,7 @@
     "protein100": 2.1,
     "fat100": 0.3,
     "carb100": 3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 142,
@@ -1559,7 +1559,7 @@
     "protein100": 0.5,
     "fat100": 0.2,
     "carb100": 4.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 143,
@@ -1570,7 +1570,7 @@
     "protein100": 1.4,
     "fat100": 0.3,
     "carb100": 3.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 144,
@@ -1581,7 +1581,7 @@
     "protein100": 7.3,
     "fat100": 0.1,
     "carb100": 11.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 145,
@@ -1592,7 +1592,7 @@
     "protein100": 1.5,
     "fat100": 0.6,
     "carb100": 2.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 146,
@@ -1603,7 +1603,7 @@
     "protein100": 1.2,
     "fat100": 0.2,
     "carb100": 17.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 147,
@@ -1614,7 +1614,7 @@
     "protein100": 0.4,
     "fat100": 0.2,
     "carb100": 8.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 148,
@@ -1625,7 +1625,7 @@
     "protein100": 0.9,
     "fat100": 0.2,
     "carb100": 4.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 149,
@@ -1636,7 +1636,7 @@
     "protein100": 0.8,
     "fat100": 0.2,
     "carb100": 4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 150,
@@ -1647,7 +1647,7 @@
     "protein100": 8.1,
     "fat100": 0.9,
     "carb100": 19.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 151,
@@ -1658,7 +1658,7 @@
     "protein100": 0.9,
     "fat100": 0.1,
     "carb100": 1.7,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 152,
@@ -1669,7 +1669,7 @@
     "protein100": 1,
     "fat100": 0.1,
     "carb100": 2.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 153,
@@ -1680,7 +1680,7 @@
     "protein100": 1,
     "fat100": 0.3,
     "carb100": 1.3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 154,
@@ -1691,7 +1691,7 @@
     "protein100": 0.9,
     "fat100": 0.3,
     "carb100": 1.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 155,
@@ -1702,7 +1702,7 @@
     "protein100": 0.5,
     "fat100": 0.3,
     "carb100": 2.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 156,
@@ -1713,7 +1713,7 @@
     "protein100": 1,
     "fat100": 0.2,
     "carb100": 1.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 157,
@@ -1724,7 +1724,7 @@
     "protein100": 1.1,
     "fat100": 0.3,
     "carb100": 3.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 158,
@@ -1735,7 +1735,7 @@
     "protein100": 0.8,
     "fat100": 0.3,
     "carb100": 3.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 159,
@@ -1746,7 +1746,7 @@
     "protein100": 0.9,
     "fat100": 0.5,
     "carb100": 2.7,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 160,
@@ -1757,7 +1757,7 @@
     "protein100": 1.1,
     "fat100": 0.5,
     "carb100": 2.3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 161,
@@ -1768,7 +1768,7 @@
     "protein100": 1.3,
     "fat100": 0.4,
     "carb100": 2.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 162,
@@ -1779,7 +1779,7 @@
     "protein100": 0.3,
     "fat100": 0.6,
     "carb100": 13.1,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 163,
@@ -1790,7 +1790,7 @@
     "protein100": 0.5,
     "fat100": 0.5,
     "carb100": 10.7,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 164,
@@ -1801,7 +1801,7 @@
     "protein100": 0.3,
     "fat100": 0.5,
     "carb100": 14,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 165,
@@ -1812,7 +1812,7 @@
     "protein100": 0.3,
     "fat100": 0.6,
     "carb100": 14,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 166,
@@ -1823,7 +1823,7 @@
     "protein100": 3.2,
     "fat100": 0.7,
     "carb100": 72.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 167,
@@ -1834,7 +1834,7 @@
     "protein100": 1.5,
     "fat100": 0.6,
     "carb100": 10.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 168,
@@ -1845,7 +1845,7 @@
     "protein100": 3,
     "fat100": 13.9,
     "carb100": 1.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 169,
@@ -1856,7 +1856,7 @@
     "protein100": 2.6,
     "fat100": 0.6,
     "carb100": 28.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 170,
@@ -1867,7 +1867,7 @@
     "protein100": 1.3,
     "fat100": 0.3,
     "carb100": 25,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 171,
@@ -1878,7 +1878,7 @@
     "protein100": 1.5,
     "fat100": 0.4,
     "carb100": 23.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 172,
@@ -1889,7 +1889,7 @@
     "protein100": 1.3,
     "fat100": 0.3,
     "carb100": 25.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 173,
@@ -1900,7 +1900,7 @@
     "protein100": 1.2,
     "fat100": 0.3,
     "carb100": 23.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 174,
@@ -1911,7 +1911,7 @@
     "protein100": 0.9,
     "fat100": 0.6,
     "carb100": 10.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 175,
@@ -1922,7 +1922,7 @@
     "protein100": 1.5,
     "fat100": 0.5,
     "carb100": 11.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 176,
@@ -1933,7 +1933,7 @@
     "protein100": 1.5,
     "fat100": 0.5,
     "carb100": 9.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 177,
@@ -1944,7 +1944,7 @@
     "protein100": 1.6,
     "fat100": 0.7,
     "carb100": 20.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 178,
@@ -1955,7 +1955,7 @@
     "protein100": 2.5,
     "fat100": 0.4,
     "carb100": 74.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 179,
@@ -1966,7 +1966,7 @@
     "protein100": 2.4,
     "fat100": 0.4,
     "carb100": 72.7,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 180,
@@ -1977,7 +1977,7 @@
     "protein100": 1.2,
     "fat100": 0.4,
     "carb100": 68,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 181,
@@ -1988,7 +1988,7 @@
     "protein100": 2,
     "fat100": 0.4,
     "carb100": 16.3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 182,
@@ -1999,7 +1999,7 @@
     "protein100": 0.3,
     "fat100": 0.2,
     "carb100": 4.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 183,
@@ -2010,7 +2010,7 @@
     "protein100": 0.8,
     "fat100": 0.3,
     "carb100": 13.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 184,
@@ -2021,7 +2021,7 @@
     "protein100": 0.8,
     "fat100": 0.3,
     "carb100": 12.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 185,
@@ -2032,7 +2032,7 @@
     "protein100": 1,
     "fat100": 0.3,
     "carb100": 12.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 186,
@@ -2043,7 +2043,7 @@
     "protein100": 1.4,
     "fat100": 0.5,
     "carb100": 20.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 187,
@@ -2054,7 +2054,7 @@
     "protein100": 0.6,
     "fat100": 0.3,
     "carb100": 11.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 188,
@@ -2065,7 +2065,7 @@
     "protein100": 1.2,
     "fat100": 0.4,
     "carb100": 19.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 189,
@@ -2076,7 +2076,7 @@
     "protein100": 1.4,
     "fat100": 0.3,
     "carb100": 5.1,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 190,
@@ -2087,7 +2087,7 @@
     "protein100": 1.2,
     "fat100": 0.3,
     "carb100": 9.1,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 191,
@@ -2098,7 +2098,7 @@
     "protein100": 2.7,
     "fat100": 0.2,
     "carb100": 14,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 192,
@@ -2109,7 +2109,7 @@
     "protein100": 0.8,
     "fat100": 0.2,
     "carb100": 12.3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 193,
@@ -2120,7 +2120,7 @@
     "protein100": 1.2,
     "fat100": 1.7,
     "carb100": 2.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 194,
@@ -2131,7 +2131,7 @@
     "protein100": 0.4,
     "fat100": 0.8,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 195,
@@ -2142,7 +2142,7 @@
     "protein100": 0.8,
     "fat100": 0.2,
     "carb100": 5.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 196,
@@ -2153,7 +2153,7 @@
     "protein100": 1,
     "fat100": 0.3,
     "carb100": 11.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 197,
@@ -2164,7 +2164,7 @@
     "protein100": 0.5,
     "fat100": 0.6,
     "carb100": 8.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 198,
@@ -2175,7 +2175,7 @@
     "protein100": 0.5,
     "fat100": 0.5,
     "carb100": 10.3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 199,
@@ -2186,7 +2186,7 @@
     "protein100": 0.5,
     "fat100": 0.5,
     "carb100": 9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 200,
@@ -2197,7 +2197,7 @@
     "protein100": 0.5,
     "fat100": 0.6,
     "carb100": 11.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 201,
@@ -2208,7 +2208,7 @@
     "protein100": 0.7,
     "fat100": 0.6,
     "carb100": 8.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 202,
@@ -2219,7 +2219,7 @@
     "protein100": 0.7,
     "fat100": 0.6,
     "carb100": 8.7,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 203,
@@ -2230,7 +2230,7 @@
     "protein100": 0.4,
     "fat100": 0.5,
     "carb100": 12.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 204,
@@ -2241,7 +2241,7 @@
     "protein100": 0.6,
     "fat100": 0.2,
     "carb100": 11.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 205,
@@ -2252,7 +2252,7 @@
     "protein100": 3.6,
     "fat100": 1.1,
     "carb100": 13.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 206,
@@ -2263,7 +2263,7 @@
     "protein100": 0.4,
     "fat100": 0.4,
     "carb100": 4.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 207,
@@ -2274,7 +2274,7 @@
     "protein100": 0.5,
     "fat100": 0.3,
     "carb100": 5.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 208,
@@ -2285,7 +2285,7 @@
     "protein100": 0.7,
     "fat100": 0.1,
     "carb100": 7.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 209,
@@ -2296,7 +2296,7 @@
     "protein100": 0.5,
     "fat100": 0.1,
     "carb100": 4.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 210,
@@ -2307,7 +2307,7 @@
     "protein100": 0.4,
     "fat100": 0.2,
     "carb100": 4.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 211,
@@ -2318,7 +2318,7 @@
     "protein100": 0.9,
     "fat100": 0.4,
     "carb100": 7.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 212,
@@ -2329,7 +2329,7 @@
     "protein100": 0.4,
     "fat100": 0.3,
     "carb100": 8.1,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 213,
@@ -2340,7 +2340,7 @@
     "protein100": 1.7,
     "fat100": 0.1,
     "carb100": 15.1,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 214,
@@ -2351,7 +2351,7 @@
     "protein100": 0.5,
     "fat100": 0.2,
     "carb100": 9.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 215,
@@ -2362,7 +2362,7 @@
     "protein100": 0.6,
     "fat100": 0.4,
     "carb100": 12.1,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 216,
@@ -2373,7 +2373,7 @@
     "protein100": 1.3,
     "fat100": 0.2,
     "carb100": 11.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 217,
@@ -2384,7 +2384,7 @@
     "protein100": 0.7,
     "fat100": 0.4,
     "carb100": 10.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 218,
@@ -2395,7 +2395,7 @@
     "protein100": 2.6,
     "fat100": 0.3,
     "carb100": 71.3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 219,
@@ -2406,7 +2406,7 @@
     "protein100": 2.8,
     "fat100": 0.4,
     "carb100": 68.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 220,
@@ -2417,7 +2417,7 @@
     "protein100": 0.7,
     "fat100": 0.2,
     "carb100": 16.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 221,
@@ -2428,7 +2428,7 @@
     "protein100": 0.9,
     "fat100": 1.3,
     "carb100": 13.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 222,
@@ -2439,7 +2439,7 @@
     "protein100": 0.7,
     "fat100": 0.9,
     "carb100": 11.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 223,
@@ -2450,7 +2450,7 @@
     "protein100": 0.8,
     "fat100": 0.4,
     "carb100": 4.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 224,
@@ -2461,7 +2461,7 @@
     "protein100": 1,
     "fat100": 0.6,
     "carb100": 3.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 225,
@@ -2472,7 +2472,7 @@
     "protein100": 2.9,
     "fat100": 0.2,
     "carb100": 67.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 226,
@@ -2483,7 +2483,7 @@
     "protein100": 0.6,
     "fat100": 0.2,
     "carb100": 3.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 227,
@@ -2494,7 +2494,7 @@
     "protein100": 0.6,
     "fat100": 0.2,
     "carb100": 3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 228,
@@ -2505,7 +2505,7 @@
     "protein100": 3.1,
     "fat100": 3.6,
     "carb100": 7.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 229,
@@ -2516,7 +2516,7 @@
     "protein100": 1.3,
     "fat100": 0.4,
     "carb100": 9.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 230,
@@ -2527,7 +2527,7 @@
     "protein100": 2,
     "fat100": 0.1,
     "carb100": 6.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 231,
@@ -2538,7 +2538,7 @@
     "protein100": 1,
     "fat100": 0.5,
     "carb100": 5.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 232,
@@ -2549,7 +2549,7 @@
     "protein100": 1,
     "fat100": 0.5,
     "carb100": 6.7,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 233,
@@ -2560,7 +2560,7 @@
     "protein100": 3.3,
     "fat100": 0.2,
     "carb100": 17.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 234,
@@ -2571,7 +2571,7 @@
     "protein100": 1.9,
     "fat100": 0.9,
     "carb100": 14.7,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 235,
@@ -2582,7 +2582,7 @@
     "protein100": 1.5,
     "fat100": 0.2,
     "carb100": 14.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 236,
@@ -2593,7 +2593,7 @@
     "protein100": 1.4,
     "fat100": 0.2,
     "carb100": 12.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 237,
@@ -2604,7 +2604,7 @@
     "protein100": 1.8,
     "fat100": 0.2,
     "carb100": 15.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 238,
@@ -2615,7 +2615,7 @@
     "protein100": 0.7,
     "fat100": 0.1,
     "carb100": 6.7,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 239,
@@ -2626,7 +2626,7 @@
     "protein100": 0.8,
     "fat100": 0.2,
     "carb100": 6.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 240,
@@ -2637,7 +2637,7 @@
     "protein100": 0.9,
     "fat100": 0.2,
     "carb100": 6.1,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 241,
@@ -2648,7 +2648,7 @@
     "protein100": 0.8,
     "fat100": 0.1,
     "carb100": 6.1,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 242,
@@ -2659,7 +2659,7 @@
     "protein100": 1.3,
     "fat100": 0.3,
     "carb100": 24.3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 243,
@@ -2670,7 +2670,7 @@
     "protein100": 1.3,
     "fat100": 0.3,
     "carb100": 23.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 244,
@@ -2681,7 +2681,7 @@
     "protein100": 1,
     "fat100": 0.2,
     "carb100": 17.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 245,
@@ -2692,7 +2692,7 @@
     "protein100": 0.9,
     "fat100": 0.4,
     "carb100": 21.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 246,
@@ -2703,7 +2703,7 @@
     "protein100": 2.6,
     "fat100": 0.1,
     "carb100": 17.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 247,
@@ -2714,7 +2714,7 @@
     "protein100": 2.2,
     "fat100": 0.2,
     "carb100": 17.7,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 248,
@@ -2725,7 +2725,7 @@
     "protein100": 3.1,
     "fat100": 0.3,
     "carb100": 21,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 249,
@@ -2736,7 +2736,7 @@
     "protein100": 2.6,
     "fat100": 0.7,
     "carb100": 6.3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 250,
@@ -2747,7 +2747,7 @@
     "protein100": 2.3,
     "fat100": 0.8,
     "carb100": 5.3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 251,
@@ -2758,7 +2758,7 @@
     "protein100": 2.4,
     "fat100": 0.8,
     "carb100": 5.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 252,
@@ -2769,7 +2769,7 @@
     "protein100": 2.3,
     "fat100": 0.7,
     "carb100": 6.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 253,
@@ -2780,7 +2780,7 @@
     "protein100": 2,
     "fat100": 0.7,
     "carb100": 6.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 254,
@@ -2791,7 +2791,7 @@
     "protein100": 3,
     "fat100": 0.6,
     "carb100": 5.3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 255,
@@ -2802,7 +2802,7 @@
     "protein100": 2.1,
     "fat100": 0.6,
     "carb100": 5.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 256,
@@ -2813,7 +2813,7 @@
     "protein100": 2.4,
     "fat100": 0.7,
     "carb100": 5.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 257,
@@ -2824,7 +2824,7 @@
     "protein100": 3.5,
     "fat100": 0.7,
     "carb100": 1.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 258,
@@ -2835,7 +2835,7 @@
     "protein100": 7.4,
     "fat100": 1.1,
     "carb100": 4.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 259,
@@ -2846,7 +2846,7 @@
     "protein100": 6.9,
     "fat100": 0.2,
     "carb100": 21.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 260,
@@ -2857,7 +2857,7 @@
     "protein100": 6.8,
     "fat100": 0.1,
     "carb100": 21.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 261,
@@ -2868,7 +2868,7 @@
     "protein100": 6.1,
     "fat100": 0.2,
     "carb100": 23.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 262,
@@ -2879,7 +2879,7 @@
     "protein100": 2.2,
     "fat100": 0.9,
     "carb100": 9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 263,
@@ -2890,7 +2890,7 @@
     "protein100": 1.5,
     "fat100": 0.7,
     "carb100": 7,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 264,
@@ -2901,7 +2901,7 @@
     "protein100": 4.7,
     "fat100": 0.7,
     "carb100": 2.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 265,
@@ -2912,7 +2912,7 @@
     "protein100": 1.5,
     "fat100": 0.2,
     "carb100": 9.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 266,
@@ -2923,7 +2923,7 @@
     "protein100": 1.8,
     "fat100": 0.2,
     "carb100": 11.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 267,
@@ -2934,7 +2934,7 @@
     "protein100": 6.3,
     "fat100": 1.3,
     "carb100": 72,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 268,
@@ -2945,7 +2945,7 @@
     "protein100": 8.1,
     "fat100": 2.6,
     "carb100": 47.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 269,
@@ -2956,7 +2956,7 @@
     "protein100": 6.7,
     "fat100": 2.8,
     "carb100": 52.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 270,
@@ -2967,7 +2967,7 @@
     "protein100": 12.7,
     "fat100": 6.4,
     "carb100": 29.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 271,
@@ -2978,7 +2978,7 @@
     "protein100": 5.9,
     "fat100": 8.4,
     "carb100": 18.7,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 272,
@@ -2989,7 +2989,7 @@
     "protein100": 10.7,
     "fat100": 17.5,
     "carb100": 13,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 273,
@@ -3000,7 +3000,7 @@
     "protein100": 13.9,
     "fat100": 16.6,
     "carb100": 22.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 274,
@@ -3011,7 +3011,7 @@
     "protein100": 25.4,
     "fat100": 5.7,
     "carb100": 10.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 275,
@@ -3022,7 +3022,7 @@
     "protein100": 6.2,
     "fat100": 24.4,
     "carb100": 26.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 276,
@@ -3033,7 +3033,7 @@
     "protein100": 6.3,
     "fat100": 36.5,
     "carb100": 27.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 277,
@@ -3044,7 +3044,7 @@
     "protein100": 15.9,
     "fat100": 21.1,
     "carb100": 24.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 278,
@@ -3055,7 +3055,7 @@
     "protein100": 10.5,
     "fat100": 2.3,
     "carb100": 35.7,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 279,
@@ -3066,7 +3066,7 @@
     "protein100": 10.1,
     "fat100": 2.7,
     "carb100": 36.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 280,
@@ -3077,7 +3077,7 @@
     "protein100": 20.3,
     "fat100": 30.4,
     "carb100": 12.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 281,
@@ -3088,7 +3088,7 @@
     "protein100": 7.7,
     "fat100": 5,
     "carb100": 49.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 282,
@@ -3099,7 +3099,7 @@
     "protein100": 18.4,
     "fat100": 58.5,
     "carb100": 3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 283,
@@ -3110,7 +3110,7 @@
     "protein100": 5.8,
     "fat100": 4.4,
     "carb100": 70.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 284,
@@ -3121,7 +3121,7 @@
     "protein100": 6.5,
     "fat100": 4.5,
     "carb100": 70.3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 285,
@@ -3132,7 +3132,7 @@
     "protein100": 2.7,
     "fat100": 5.5,
     "carb100": 45,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 286,
@@ -3143,7 +3143,7 @@
     "protein100": 18.8,
     "fat100": 45.2,
     "carb100": 25.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 287,
@@ -3154,7 +3154,7 @@
     "protein100": 7.3,
     "fat100": 63.3,
     "carb100": 8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 288,
@@ -3165,7 +3165,7 @@
     "protein100": 3.8,
     "fat100": 41.4,
     "carb100": 6.3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 289,
@@ -3176,7 +3176,7 @@
     "protein100": 23.4,
     "fat100": 23.7,
     "carb100": 33.7,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 290,
@@ -3187,7 +3187,7 @@
     "protein100": 19.2,
     "fat100": 43.1,
     "carb100": 10.3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 291,
@@ -3198,7 +3198,7 @@
     "protein100": 21.6,
     "fat100": 43.2,
     "carb100": 9.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 292,
@@ -3209,7 +3209,7 @@
     "protein100": 21.7,
     "fat100": 43.1,
     "carb100": 10.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 293,
@@ -3220,7 +3220,7 @@
     "protein100": 23.7,
     "fat100": 39.6,
     "carb100": 17.3,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 294,
@@ -3231,7 +3231,7 @@
     "protein100": 19.5,
     "fat100": 40.2,
     "carb100": 16.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 295,
@@ -3242,7 +3242,7 @@
     "protein100": 18.6,
     "fat100": 35.7,
     "carb100": 11,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 296,
@@ -3253,7 +3253,7 @@
     "protein100": 18.9,
     "fat100": 38.6,
     "carb100": 23,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 297,
@@ -3264,7 +3264,7 @@
     "protein100": 18.3,
     "fat100": 39.5,
     "carb100": 20.6,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 298,
@@ -3275,7 +3275,7 @@
     "protein100": 12.6,
     "fat100": 48.8,
     "carb100": 26.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 299,
@@ -3286,7 +3286,7 @@
     "protein100": 23.4,
     "fat100": 42.5,
     "carb100": 15.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 300,
@@ -3297,7 +3297,7 @@
     "protein100": 17.7,
     "fat100": 30.9,
     "carb100": 30.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 301,
@@ -3308,7 +3308,7 @@
     "protein100": 23.5,
     "fat100": 51.9,
     "carb100": 6.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 302,
@@ -3319,7 +3319,7 @@
     "protein100": 14.9,
     "fat100": 64.3,
     "carb100": 10.1,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 303,
@@ -3330,7 +3330,7 @@
     "protein100": 1.9,
     "fat100": 0.2,
     "carb100": 84.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 304,
@@ -3341,7 +3341,7 @@
     "protein100": 0.2,
     "fat100": 0.4,
     "carb100": 13.1,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 305,
@@ -3352,7 +3352,7 @@
     "protein100": 3.7,
     "fat100": 0.4,
     "carb100": 2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 306,
@@ -3363,7 +3363,7 @@
     "protein100": 1.8,
     "fat100": 0.3,
     "carb100": 2.8,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 307,
@@ -3374,7 +3374,7 @@
     "protein100": 3.2,
     "fat100": 0.8,
     "carb100": 9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 308,
@@ -3385,7 +3385,7 @@
     "protein100": 19,
     "fat100": 2.9,
     "carb100": 33.1,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 309,
@@ -3396,7 +3396,7 @@
     "protein100": 0.2,
     "fat100": 0,
     "carb100": 5.7,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 310,
@@ -3407,7 +3407,7 @@
     "protein100": 0.3,
     "fat100": 0.2,
     "carb100": 3.2,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 311,
@@ -3418,7 +3418,7 @@
     "protein100": 3.7,
     "fat100": 6.6,
     "carb100": 8.4,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 312,
@@ -3429,7 +3429,7 @@
     "protein100": 3.3,
     "fat100": 4.5,
     "carb100": 4.9,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 313,
@@ -3440,7 +3440,7 @@
     "protein100": 18.9,
     "fat100": 14.8,
     "carb100": 12.4,
-    "isShortlisted": true
+    "isShortlisted": 1
   },
   {
     "id": 314,
@@ -3451,7 +3451,7 @@
     "protein100": 16.3,
     "fat100": 20.6,
     "carb100": 16.5,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 315,
@@ -3462,7 +3462,7 @@
     "protein100": 13.3,
     "fat100": 9.2,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 316,
@@ -3473,7 +3473,7 @@
     "protein100": 10.8,
     "fat100": 0.1,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 317,
@@ -3484,7 +3484,7 @@
     "protein100": 15.7,
     "fat100": 26.3,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 318,
@@ -3495,7 +3495,7 @@
     "protein100": 13.4,
     "fat100": 10.5,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 319,
@@ -3506,7 +3506,7 @@
     "protein100": 12.4,
     "fat100": 0.3,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 320,
@@ -3517,7 +3517,7 @@
     "protein100": 16.1,
     "fat100": 27.5,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 321,
@@ -3528,7 +3528,7 @@
     "protein100": 16.5,
     "fat100": 11.6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 322,
@@ -3539,7 +3539,7 @@
     "protein100": 13.1,
     "fat100": 13,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 323,
@@ -3550,7 +3550,7 @@
     "protein100": 14.4,
     "fat100": 14.1,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 324,
@@ -3561,7 +3561,7 @@
     "protein100": 14.8,
     "fat100": 16.3,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 325,
@@ -3572,7 +3572,7 @@
     "protein100": 13.8,
     "fat100": 13.6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 326,
@@ -3583,7 +3583,7 @@
     "protein100": 14.6,
     "fat100": 13.8,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 327,
@@ -3594,7 +3594,7 @@
     "protein100": 15.1,
     "fat100": 14.8,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 328,
@@ -3605,7 +3605,7 @@
     "protein100": 12.4,
     "fat100": 11.5,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 329,
@@ -3616,7 +3616,7 @@
     "protein100": 13,
     "fat100": 11.5,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 330,
@@ -3627,7 +3627,7 @@
     "protein100": 19.4,
     "fat100": 12.6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 331,
@@ -3638,7 +3638,7 @@
     "protein100": 18.2,
     "fat100": 14.2,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 332,
@@ -3649,7 +3649,7 @@
     "protein100": 21.8,
     "fat100": 9,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 333,
@@ -3660,7 +3660,7 @@
     "protein100": 17.4,
     "fat100": 13.8,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 334,
@@ -3671,7 +3671,7 @@
     "protein100": 21.6,
     "fat100": 4.1,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 335,
@@ -3682,7 +3682,7 @@
     "protein100": 18.2,
     "fat100": 2.1,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 336,
@@ -3693,7 +3693,7 @@
     "protein100": 17,
     "fat100": 11.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 337,
@@ -3704,7 +3704,7 @@
     "protein100": 18.3,
     "fat100": 12.8,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 338,
@@ -3715,7 +3715,7 @@
     "protein100": 22.1,
     "fat100": 10.2,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 339,
@@ -3726,7 +3726,7 @@
     "protein100": 18.7,
     "fat100": 12.1,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 340,
@@ -3737,7 +3737,7 @@
     "protein100": 19.1,
     "fat100": 6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 341,
@@ -3748,7 +3748,7 @@
     "protein100": 22.7,
     "fat100": 4.6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 342,
@@ -3759,7 +3759,7 @@
     "protein100": 20.5,
     "fat100": 3.2,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 343,
@@ -3770,7 +3770,7 @@
     "protein100": 17.9,
     "fat100": 6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 344,
@@ -3781,7 +3781,7 @@
     "protein100": 20.9,
     "fat100": 6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 345,
@@ -3792,7 +3792,7 @@
     "protein100": 20.3,
     "fat100": 8.2,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 346,
@@ -3803,7 +3803,7 @@
     "protein100": 20.5,
     "fat100": 6.3,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 347,
@@ -3814,7 +3814,7 @@
     "protein100": 22,
     "fat100": 8,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 348,
@@ -3825,7 +3825,7 @@
     "protein100": 21.9,
     "fat100": 10.8,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 349,
@@ -3836,7 +3836,7 @@
     "protein100": 20.3,
     "fat100": 11.9,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 350,
@@ -3847,7 +3847,7 @@
     "protein100": 20.4,
     "fat100": 6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 351,
@@ -3858,7 +3858,7 @@
     "protein100": 22.1,
     "fat100": 7.9,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 352,
@@ -3869,7 +3869,7 @@
     "protein100": 13.8,
     "fat100": 8.1,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 353,
@@ -3880,7 +3880,7 @@
     "protein100": 16.6,
     "fat100": 13.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 354,
@@ -3891,7 +3891,7 @@
     "protein100": 16.9,
     "fat100": 3.1,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 355,
@@ -3902,7 +3902,7 @@
     "protein100": 19.4,
     "fat100": 4.4,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 356,
@@ -3913,7 +3913,7 @@
     "protein100": 20.3,
     "fat100": 4.9,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 357,
@@ -3924,7 +3924,7 @@
     "protein100": 15.4,
     "fat100": 3.4,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 358,
@@ -3935,7 +3935,7 @@
     "protein100": 18.5,
     "fat100": 2.4,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 359,
@@ -3946,7 +3946,7 @@
     "protein100": 15.6,
     "fat100": 2.9,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 360,
@@ -3957,7 +3957,7 @@
     "protein100": 12.9,
     "fat100": 8.3,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 361,
@@ -3968,7 +3968,7 @@
     "protein100": 12.3,
     "fat100": 2.4,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 362,
@@ -3979,7 +3979,7 @@
     "protein100": 18.2,
     "fat100": 14.3,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 363,
@@ -3990,7 +3990,7 @@
     "protein100": 18,
     "fat100": 5.2,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 364,
@@ -4001,7 +4001,7 @@
     "protein100": 21.4,
     "fat100": 8.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 365,
@@ -4012,7 +4012,7 @@
     "protein100": 13.1,
     "fat100": 7.3,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 366,
@@ -4023,7 +4023,7 @@
     "protein100": 16.6,
     "fat100": 13.5,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 367,
@@ -4034,7 +4034,7 @@
     "protein100": 16.1,
     "fat100": 2.4,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 368,
@@ -4045,7 +4045,7 @@
     "protein100": 18.2,
     "fat100": 3.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 369,
@@ -4056,7 +4056,7 @@
     "protein100": 22.3,
     "fat100": 4.9,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 370,
@@ -4067,7 +4067,7 @@
     "protein100": 16.8,
     "fat100": 4.1,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 371,
@@ -4078,7 +4078,7 @@
     "protein100": 16,
     "fat100": 3,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 372,
@@ -4089,7 +4089,7 @@
     "protein100": 16.2,
     "fat100": 2.9,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 373,
@@ -4100,7 +4100,7 @@
     "protein100": 20.6,
     "fat100": 14.6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 374,
@@ -4111,7 +4111,7 @@
     "protein100": 19.8,
     "fat100": 6.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 375,
@@ -4122,7 +4122,7 @@
     "protein100": 22.6,
     "fat100": 7.4,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 376,
@@ -4133,7 +4133,7 @@
     "protein100": 10.6,
     "fat100": 9.3,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 377,
@@ -4144,7 +4144,7 @@
     "protein100": 15.6,
     "fat100": 12.6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 378,
@@ -4155,7 +4155,7 @@
     "protein100": 15.7,
     "fat100": 2.3,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 379,
@@ -4166,7 +4166,7 @@
     "protein100": 17.7,
     "fat100": 3.6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 380,
@@ -4177,7 +4177,7 @@
     "protein100": 20.7,
     "fat100": 4,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 381,
@@ -4188,7 +4188,7 @@
     "protein100": 13.1,
     "fat100": 2.5,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 382,
@@ -4199,7 +4199,7 @@
     "protein100": 17.4,
     "fat100": 2.2,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 383,
@@ -4210,7 +4210,7 @@
     "protein100": 17.1,
     "fat100": 4,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 384,
@@ -4221,7 +4221,7 @@
     "protein100": 21,
     "fat100": 7.5,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 385,
@@ -4232,7 +4232,7 @@
     "protein100": 22.5,
     "fat100": 3.9,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 386,
@@ -4243,7 +4243,7 @@
     "protein100": 21.1,
     "fat100": 6.9,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 387,
@@ -4254,7 +4254,7 @@
     "protein100": 9.8,
     "fat100": 7.6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 388,
@@ -4265,7 +4265,7 @@
     "protein100": 17.8,
     "fat100": 11.8,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 389,
@@ -4276,7 +4276,7 @@
     "protein100": 18.8,
     "fat100": 3.8,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 390,
@@ -4287,7 +4287,7 @@
     "protein100": 21,
     "fat100": 4,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 391,
@@ -4298,7 +4298,7 @@
     "protein100": 17.7,
     "fat100": 2.1,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 392,
@@ -4309,7 +4309,7 @@
     "protein100": 15.2,
     "fat100": 3.5,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 393,
@@ -4320,7 +4320,7 @@
     "protein100": 19.1,
     "fat100": 11.1,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 394,
@@ -4331,7 +4331,7 @@
     "protein100": 18.2,
     "fat100": 6.1,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 395,
@@ -4342,7 +4342,7 @@
     "protein100": 19.6,
     "fat100": 4.1,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 396,
@@ -4353,7 +4353,7 @@
     "protein100": 17.4,
     "fat100": 18.8,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 397,
@@ -4364,7 +4364,7 @@
     "protein100": 19.4,
     "fat100": 11.3,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 398,
@@ -4375,7 +4375,7 @@
     "protein100": 18.8,
     "fat100": 18.6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 399,
@@ -4386,7 +4386,7 @@
     "protein100": 15.1,
     "fat100": 2.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 400,
@@ -4397,7 +4397,7 @@
     "protein100": 16.3,
     "fat100": 4.9,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 401,
@@ -4408,7 +4408,7 @@
     "protein100": 19.9,
     "fat100": 3.9,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 402,
@@ -4419,7 +4419,7 @@
     "protein100": 15.4,
     "fat100": 7.8,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 403,
@@ -4430,7 +4430,7 @@
     "protein100": 15.1,
     "fat100": 2.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 404,
@@ -4441,7 +4441,7 @@
     "protein100": 14.4,
     "fat100": 3.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 405,
@@ -4452,7 +4452,7 @@
     "protein100": 15,
     "fat100": 9,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 406,
@@ -4463,7 +4463,7 @@
     "protein100": 21.1,
     "fat100": 6.6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 407,
@@ -4474,7 +4474,7 @@
     "protein100": 20.6,
     "fat100": 2.6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 408,
@@ -4485,7 +4485,7 @@
     "protein100": 20.5,
     "fat100": 4.2,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 409,
@@ -4496,7 +4496,7 @@
     "protein100": 20,
     "fat100": 8,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 410,
@@ -4507,7 +4507,7 @@
     "protein100": 22.6,
     "fat100": 4.9,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 411,
@@ -4518,7 +4518,7 @@
     "protein100": 21.3,
     "fat100": 6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 412,
@@ -4529,7 +4529,7 @@
     "protein100": 21.8,
     "fat100": 1,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 413,
@@ -4540,7 +4540,7 @@
     "protein100": 21.6,
     "fat100": 1.8,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 414,
@@ -4551,7 +4551,7 @@
     "protein100": 19.9,
     "fat100": 0.8,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 415,
@@ -4562,7 +4562,7 @@
     "protein100": 22,
     "fat100": 1.1,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 416,
@@ -4573,7 +4573,7 @@
     "protein100": 15.3,
     "fat100": 0.3,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 417,
@@ -4584,7 +4584,7 @@
     "protein100": 19.5,
     "fat100": 1.2,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 418,
@@ -4595,7 +4595,7 @@
     "protein100": 13.5,
     "fat100": 1,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 419,
@@ -4606,7 +4606,7 @@
     "protein100": 22.3,
     "fat100": 2.9,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 420,
@@ -4617,7 +4617,7 @@
     "protein100": 22.2,
     "fat100": 2.1,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 421,
@@ -4628,7 +4628,7 @@
     "protein100": 20.2,
     "fat100": 1.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 422,
@@ -4639,7 +4639,7 @@
     "protein100": 17.2,
     "fat100": 0.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 423,
@@ -4650,7 +4650,7 @@
     "protein100": 20,
     "fat100": 0.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 424,
@@ -4661,7 +4661,7 @@
     "protein100": 20.1,
     "fat100": 1.8,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 425,
@@ -4672,7 +4672,7 @@
     "protein100": 22.3,
     "fat100": 2,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 426,
@@ -4683,7 +4683,7 @@
     "protein100": 19.4,
     "fat100": 0.9,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 427,
@@ -4694,7 +4694,7 @@
     "protein100": 22.6,
     "fat100": 0.4,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 428,
@@ -4705,7 +4705,7 @@
     "protein100": 21.8,
     "fat100": 18.5,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 429,
@@ -4716,7 +4716,7 @@
     "protein100": 21.6,
     "fat100": 1.5,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 430,
@@ -4727,7 +4727,7 @@
     "protein100": 22.5,
     "fat100": 1.9,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 431,
@@ -4738,7 +4738,7 @@
     "protein100": 18.7,
     "fat100": 1.3,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 432,
@@ -4749,7 +4749,7 @@
     "protein100": 22.1,
     "fat100": 4.2,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 433,
@@ -4760,7 +4760,7 @@
     "protein100": 20.9,
     "fat100": 4.5,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 434,
@@ -4771,7 +4771,7 @@
     "protein100": 19.4,
     "fat100": 1.2,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 435,
@@ -4782,7 +4782,7 @@
     "protein100": 20.2,
     "fat100": 0.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 436,
@@ -4793,7 +4793,7 @@
     "protein100": 22.1,
     "fat100": 1.3,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 437,
@@ -4804,7 +4804,7 @@
     "protein100": 19.7,
     "fat100": 1.4,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 438,
@@ -4815,7 +4815,7 @@
     "protein100": 19.5,
     "fat100": 0.8,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 439,
@@ -4826,7 +4826,7 @@
     "protein100": 20.2,
     "fat100": 3,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 440,
@@ -4837,7 +4837,7 @@
     "protein100": 22.5,
     "fat100": 4.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 441,
@@ -4848,7 +4848,7 @@
     "protein100": 23.1,
     "fat100": 0.6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 442,
@@ -4859,7 +4859,7 @@
     "protein100": 23.7,
     "fat100": 3.4,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 443,
@@ -4870,7 +4870,7 @@
     "protein100": 21.6,
     "fat100": 3.6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 444,
@@ -4881,7 +4881,7 @@
     "protein100": 20.1,
     "fat100": 0.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 445,
@@ -4892,7 +4892,7 @@
     "protein100": 21.5,
     "fat100": 1.5,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 446,
@@ -4903,7 +4903,7 @@
     "protein100": 21.3,
     "fat100": 1,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 447,
@@ -4914,7 +4914,7 @@
     "protein100": 21.2,
     "fat100": 0.8,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 448,
@@ -4925,7 +4925,7 @@
     "protein100": 23.7,
     "fat100": 1.1,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 449,
@@ -4936,7 +4936,7 @@
     "protein100": 20.7,
     "fat100": 4.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 450,
@@ -4947,7 +4947,7 @@
     "protein100": 20.2,
     "fat100": 1.3,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 451,
@@ -4958,7 +4958,7 @@
     "protein100": 19,
     "fat100": 0.6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 452,
@@ -4969,7 +4969,7 @@
     "protein100": 22.9,
     "fat100": 0.6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 453,
@@ -4980,7 +4980,7 @@
     "protein100": 19.8,
     "fat100": 0.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 454,
@@ -4991,7 +4991,7 @@
     "protein100": 22,
     "fat100": 1.6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 455,
@@ -5002,7 +5002,7 @@
     "protein100": 21.6,
     "fat100": 1.8,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 456,
@@ -5013,7 +5013,7 @@
     "protein100": 19.7,
     "fat100": 0.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 457,
@@ -5024,7 +5024,7 @@
     "protein100": 19.3,
     "fat100": 1.8,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 458,
@@ -5035,7 +5035,7 @@
     "protein100": 22,
     "fat100": 4.4,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 459,
@@ -5046,7 +5046,7 @@
     "protein100": 19.7,
     "fat100": 0.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 460,
@@ -5057,7 +5057,7 @@
     "protein100": 21.5,
     "fat100": 2.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 461,
@@ -5068,7 +5068,7 @@
     "protein100": 19.9,
     "fat100": 0.6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 462,
@@ -5079,7 +5079,7 @@
     "protein100": 20.8,
     "fat100": 0.6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 463,
@@ -5090,7 +5090,7 @@
     "protein100": 20.9,
     "fat100": 0.9,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 464,
@@ -5101,7 +5101,7 @@
     "protein100": 22.1,
     "fat100": 1.3,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 465,
@@ -5112,7 +5112,7 @@
     "protein100": 20.5,
     "fat100": 5.4,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 466,
@@ -5123,7 +5123,7 @@
     "protein100": 18.9,
     "fat100": 4.8,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 467,
@@ -5134,7 +5134,7 @@
     "protein100": 21.1,
     "fat100": 0.5,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 468,
@@ -5145,7 +5145,7 @@
     "protein100": 19,
     "fat100": 5.1,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 469,
@@ -5156,7 +5156,7 @@
     "protein100": 19.7,
     "fat100": 1.9,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 470,
@@ -5167,7 +5167,7 @@
     "protein100": 20.1,
     "fat100": 1.6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 471,
@@ -5178,7 +5178,7 @@
     "protein100": 21,
     "fat100": 1.2,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 472,
@@ -5189,7 +5189,7 @@
     "protein100": 21.6,
     "fat100": 1.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 473,
@@ -5200,7 +5200,7 @@
     "protein100": 19.4,
     "fat100": 2.2,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 474,
@@ -5211,7 +5211,7 @@
     "protein100": 18.8,
     "fat100": 1.5,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 475,
@@ -5222,7 +5222,7 @@
     "protein100": 19,
     "fat100": 0.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 476,
@@ -5233,7 +5233,7 @@
     "protein100": 22.8,
     "fat100": 1.3,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 477,
@@ -5244,7 +5244,7 @@
     "protein100": 21.5,
     "fat100": 2.3,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 478,
@@ -5255,7 +5255,7 @@
     "protein100": 20.7,
     "fat100": 3,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 479,
@@ -5266,7 +5266,7 @@
     "protein100": 21,
     "fat100": 9.9,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 480,
@@ -5277,7 +5277,7 @@
     "protein100": 20.3,
     "fat100": 2.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 481,
@@ -5288,7 +5288,7 @@
     "protein100": 21.9,
     "fat100": 1.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 482,
@@ -5299,7 +5299,7 @@
     "protein100": 17.9,
     "fat100": 9,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 483,
@@ -5310,7 +5310,7 @@
     "protein100": 21.6,
     "fat100": 0.8,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 484,
@@ -5321,7 +5321,7 @@
     "protein100": 23.4,
     "fat100": 0.8,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 485,
@@ -5332,7 +5332,7 @@
     "protein100": 21,
     "fat100": 0.8,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 486,
@@ -5343,7 +5343,7 @@
     "protein100": 22.5,
     "fat100": 1.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 487,
@@ -5354,7 +5354,7 @@
     "protein100": 22.7,
     "fat100": 6.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 488,
@@ -5365,7 +5365,7 @@
     "protein100": 20.7,
     "fat100": 1.5,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 489,
@@ -5376,7 +5376,7 @@
     "protein100": 21.7,
     "fat100": 5.2,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 490,
@@ -5387,7 +5387,7 @@
     "protein100": 19.1,
     "fat100": 1.2,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 491,
@@ -5398,7 +5398,7 @@
     "protein100": 24,
     "fat100": 0.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 492,
@@ -5409,7 +5409,7 @@
     "protein100": 21.7,
     "fat100": 1.2,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 493,
@@ -5420,7 +5420,7 @@
     "protein100": 20.8,
     "fat100": 2.1,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 494,
@@ -5431,7 +5431,7 @@
     "protein100": 18.5,
     "fat100": 1.1,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 495,
@@ -5442,7 +5442,7 @@
     "protein100": 24.5,
     "fat100": 1.4,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 496,
@@ -5453,7 +5453,7 @@
     "protein100": 21.3,
     "fat100": 1.1,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 497,
@@ -5464,7 +5464,7 @@
     "protein100": 21.8,
     "fat100": 1.1,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 498,
@@ -5475,7 +5475,7 @@
     "protein100": 22.3,
     "fat100": 5.2,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 499,
@@ -5486,7 +5486,7 @@
     "protein100": 22.2,
     "fat100": 4.3,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 500,
@@ -5497,7 +5497,7 @@
     "protein100": 20.1,
     "fat100": 2.1,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 501,
@@ -5508,7 +5508,7 @@
     "protein100": 21.8,
     "fat100": 0.8,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 502,
@@ -5519,7 +5519,7 @@
     "protein100": 19.8,
     "fat100": 0.9,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 503,
@@ -5530,7 +5530,7 @@
     "protein100": 24.7,
     "fat100": 5.3,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 504,
@@ -5541,7 +5541,7 @@
     "protein100": 10.2,
     "fat100": 1.4,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 505,
@@ -5552,7 +5552,7 @@
     "protein100": 15.4,
     "fat100": 0.6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 506,
@@ -5563,7 +5563,7 @@
     "protein100": 16,
     "fat100": 0.6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 507,
@@ -5574,7 +5574,7 @@
     "protein100": 18.5,
     "fat100": 0.8,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 508,
@@ -5585,7 +5585,7 @@
     "protein100": 10,
     "fat100": 0.6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 509,
@@ -5596,7 +5596,7 @@
     "protein100": 9.5,
     "fat100": 2.4,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 510,
@@ -5607,7 +5607,7 @@
     "protein100": 14.9,
     "fat100": 0.6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 511,
@@ -5618,7 +5618,7 @@
     "protein100": 14.3,
     "fat100": 0.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 512,
@@ -5629,7 +5629,7 @@
     "protein100": 12.1,
     "fat100": 1,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 513,
@@ -5640,7 +5640,7 @@
     "protein100": 11.8,
     "fat100": 1.3,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 514,
@@ -5651,7 +5651,7 @@
     "protein100": 14.7,
     "fat100": 1.1,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 515,
@@ -5662,7 +5662,7 @@
     "protein100": 16.1,
     "fat100": 1.1,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 516,
@@ -5673,7 +5673,7 @@
     "protein100": 16.8,
     "fat100": 0.9,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 517,
@@ -5684,7 +5684,7 @@
     "protein100": 16.3,
     "fat100": 1.4,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 518,
@@ -5695,7 +5695,7 @@
     "protein100": 17.4,
     "fat100": 1.2,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 519,
@@ -5706,7 +5706,7 @@
     "protein100": 15.9,
     "fat100": 6.2,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 520,
@@ -5717,7 +5717,7 @@
     "protein100": 17.9,
     "fat100": 2.2,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 521,
@@ -5728,7 +5728,7 @@
     "protein100": 20.4,
     "fat100": 2.6,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 522,
@@ -5739,7 +5739,7 @@
     "protein100": 16.9,
     "fat100": 2.9,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 523,
@@ -5750,7 +5750,7 @@
     "protein100": 17.1,
     "fat100": 16.8,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 524,
@@ -5761,7 +5761,7 @@
     "protein100": 19.7,
     "fat100": 2.4,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 525,
@@ -5772,7 +5772,7 @@
     "protein100": 13.2,
     "fat100": 0.9,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 526,
@@ -5783,7 +5783,7 @@
     "protein100": 19.2,
     "fat100": 0.5,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 527,
@@ -5794,7 +5794,7 @@
     "protein100": 13.1,
     "fat100": 0.8,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 528,
@@ -5805,7 +5805,7 @@
     "protein100": 14.2,
     "fat100": 0.7,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 529,
@@ -5816,7 +5816,7 @@
     "protein100": 0,
     "fat100": 100,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 530,
@@ -5827,7 +5827,7 @@
     "protein100": 0,
     "fat100": 100,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 531,
@@ -5838,7 +5838,7 @@
     "protein100": 0,
     "fat100": 100,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 532,
@@ -5849,7 +5849,7 @@
     "protein100": 0,
     "fat100": 100,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 533,
@@ -5860,7 +5860,7 @@
     "protein100": 0,
     "fat100": 100,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 534,
@@ -5871,7 +5871,7 @@
     "protein100": 0,
     "fat100": 100,
     "carb100": 0,
-    "isShortlisted": true
+    "isShortlisted": 1
   },
   {
     "id": 535,
@@ -5882,7 +5882,7 @@
     "protein100": 0,
     "fat100": 100,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 536,
@@ -5893,7 +5893,7 @@
     "protein100": 0,
     "fat100": 100,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 537,
@@ -5904,7 +5904,7 @@
     "protein100": 0,
     "fat100": 100,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 538,
@@ -5915,7 +5915,7 @@
     "protein100": 0,
     "fat100": 100,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 539,
@@ -5926,7 +5926,7 @@
     "protein100": 0,
     "fat100": 100,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 540,
@@ -5937,7 +5937,7 @@
     "protein100": 0,
     "fat100": 100,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 541,
@@ -5948,7 +5948,7 @@
     "protein100": 0,
     "fat100": 100,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   },
   {
     "id": 542,
@@ -5959,6 +5959,6 @@
     "protein100": 0,
     "fat100": 100,
     "carb100": 0,
-    "isShortlisted": false
+    "isShortlisted": 0
   }
-]
+];

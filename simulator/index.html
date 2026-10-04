@@ -395,10 +395,44 @@
           </nav>
         </div>
       </div>
+
+      <!-- LIVE SESSION OUTPUT DISPLAY UNDER THE PHONE -->
+      <div class="phone-session-widget" id="phone-session-widget">
+        <div class="session-widget-header">
+          <div class="session-header-left">
+            <span class="session-live-dot"></span>
+            <span class="session-badge">Scale Session Accumulator</span>
+          </div>
+          <button class="btn-session-reset" id="under-phone-btn-reset" title="Reset Session Totals">Reset Session</button>
+        </div>
+
+        <div class="session-card session-card-large">
+          <div class="session-title" id="under-phone-session-title">Session (0 items): 0 kcal</div>
+          <div class="session-sub" id="under-phone-session-sub">P:0.0g  F:0.0g  C:0.0g</div>
+        </div>
+
+        <div class="session-macro-pills">
+          <span class="macro-pill p-pill" id="under-phone-p-pill">P: 0.0g (0%)</span>
+          <span class="macro-pill f-pill" id="under-phone-f-pill">F: 0.0g (0%)</span>
+          <span class="macro-pill c-pill" id="under-phone-c-pill">C: 0.0g (0%)</span>
+          <span class="macro-pill wt-pill" id="under-phone-wt-pill">⚖ 0.0g</span>
+        </div>
+
+        <details class="session-history-details" id="session-history-details">
+          <summary class="session-history-summary">
+            <span>Session Items History (<span id="under-phone-history-count">0</span>)</span>
+            <span class="chevron">▾</span>
+          </summary>
+          <div class="session-items-list" id="under-phone-session-items">
+            <div class="session-empty-hint">Weigh items on the scale and click to commit them to this session total.</div>
+          </div>
+        </details>
+      </div>
     </section>
 
   </main>
 
+  <script src="foods_data.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

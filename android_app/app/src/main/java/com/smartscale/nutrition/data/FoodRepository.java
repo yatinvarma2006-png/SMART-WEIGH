@@ -79,7 +79,8 @@ public class FoodRepository {
 
     public void addCustomFood(FoodItem foodItem, Runnable onComplete) {
         AppDatabase.databaseWriteExecutor.execute(() -> {
-            foodDao.insert(foodItem);
+            long newId = foodDao.insert(foodItem);
+            foodItem.setId((int) newId);
             if (onComplete != null) {
                 onComplete.run();
             }

@@ -41,7 +41,7 @@ public:
     void addToSession(const FoodNutritionItem &food, float weightGrams);
     const RunningSessionTotal& getSessionTotal() const { return _session; }
 
-    // BLE Sync Buffer Management
+    // Wi-Fi REST Sync Buffer Management
     void beginSync();
     bool setBufferItem(int slot, const char* name, float cal100, float protein100, float fat100, float carb100);
     int commitSync(); // Saves buffer to NVS and reloads active shortlist. Returns items saved.
@@ -54,7 +54,7 @@ private:
     FoodNutritionItem _activeItems[MAX_SHORTLIST_ITEMS];
     int _activeCount;
 
-    // Buffer shortlist (populated during BLE sync)
+    // Buffer shortlist (populated during Wi-Fi REST sync)
     FoodNutritionItem _bufferItems[MAX_SHORTLIST_ITEMS];
     bool _isSyncing;
 

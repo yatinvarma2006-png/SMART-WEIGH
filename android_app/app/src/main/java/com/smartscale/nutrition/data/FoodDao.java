@@ -40,7 +40,7 @@ public interface FoodDao {
     void updateFood(FoodItem food);
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insert(FoodItem food);
+    long insert(FoodItem food);
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertAll(List<FoodItem> foods);
